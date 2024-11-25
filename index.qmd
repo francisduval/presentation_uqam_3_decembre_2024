@@ -1,0 +1,640 @@
+---
+title: "L'intelligence d'affaires chez Co-operators"
+lang: fr
+subtitle: "Présentation dans le cadre du cours « Applications probabilistes des risques actuariels »"
+author:
+  name: Francis Duval, Chercheur Scientifique | Co-operators
+  email: francis_duval@cooperators.ca
+date: 2024-12-03
+date-format: long
+format: 
+  revealjs:
+    template-partials:
+      - title-slide.html
+    theme: [default, styles.scss]
+    width: 1280
+    height: 720
+    chalkboard: true
+    transition: slide
+    logo: images/logo_blue_2.png
+    # footer: 'footer'
+    slide-number: c/t
+    code-block-height: 500px
+editor: 
+  markdown: 
+    wrap: 72
+include-after-body: add-custom-footer.html
+---
+
+## Mon parcours
+
+### Académique
+
+::: columns
+
+::: {.column width='33%'}
+[Baccalauréat]{.three-green-blocks}  
+
+<div style='height:70px;'></div>
+
+::: {.ul-font-size-small}
+- **Actuariat**
+- 2 stages chez Intact
+- Session à l'étranger à Lyon
+:::
+:::
+
+::: {.column width='33%'}
+[Maitrise]{.three-green-blocks}
+
+<div style='height:70px;'></div>
+
+::: {.ul-font-size-small}
+- **Mathématiques actuarielles et financières**
+- Mémoire: Techniques de gradient boosting pour la modélisation des réserves individuelles en assurance non-vie
+- Stage de recherche Mitacs chez Desjardins
+:::
+:::
+
+::: {.column width='33%'}
+[Doctorat]{.three-green-blocks}
+
+<div style='height:70px;'></div>
+
+::: {.ul-font-size-small}
+- **Mathématiques**
+- Thèse: Modélisation des sinistres en assurance automobile avec l’utilisation de données télématiques : approches d’apprentissage automatique en classification et régression de comptage
+- Chaire Co-operators en analyse des risques actuariels
+:::
+:::
+
+:::
+
+### Professionel
+
+- Chercheur scientifique dans l'équipe « Recherche et Innovation Analytique » depuis septembre 2023.
+
+
+## Qu'est-ce que l'intelligence d'affaires?
+
+### Intelligence d'affaires = Tirer de la valeur des données
+
+Les données ne parlent pas d'elles-mêmes: il faut les faire parler.
+
+<br>
+
+::: columns
+
+::: {.column width='48%'}
+[Avec...]{.two-blue-blocks}  
+
+<div style='height:70px;'></div>
+
+- Programmation R/Python (et autres)
+- Machine learning/Deep learning
+- Traitement de langage naturel
+- Théorie des valeurs extrêmes
+- Modèles de catastrophes
+- Modèles statistiques classiques
+- Etc.
+:::
+
+::: {.column width='48%'}
+[...on produit]{.two-blue-blocks}
+
+<div style='height:70px;'></div>
+
+<div style='padding-left:0px;'>
+- Modèles
+- Tableaux de bord
+- Applications Shiny (ou autre)
+- Visualisations
+- Analyses statistiques
+- Etc.
+</div>
+:::
+
+:::
+
+![](images/dashboard.png){.absolute width=200 top=0 right=0}
+
+
+## Exemples de projets
+
+### Sélecteur de codes IBC
+
+**Résumé du problème:**
+
+- Lorsqu'on assure une entreprise, on doit lui assigner un code parmi 1300 codes. Ce n'est pas toujours évident d'assigner le bon code.
+
+
+::: {.fragment .fade-in-then-out}
+
+::: {style='font-size: 25px; position: absolute; top: 310px; left: 0px;'}
+**Exemples de codes IBC:**  
+
+| Index | Code IBC | Description du code |
+|-|--|----|
+| 1 | 0735a10   | Architects - Landscaping Only |
+| 2 | 8916a10 | Engineers |
+| 3 | 8075a10 | Sanitariums |
+| 4 | 5813a10 | Coffee shops (warming of food only, no roasting of beans) |
+| ... | ... | ... |
+| 1260 | 3496a10 | Electronic games |
+:::
+
+:::
+
+
+## Exemples de projets
+
+### Sélecteur de codes IBC
+
+
+
+
+## Postes
+
+- Postes data scientist vs actuaire
+- Structure de rémunération différente, poste de data scientist avantageux si ton but n'est pas de faire les examens.
+
+
+
+## Résumé de la présentation
+
+### 1. Sentence-BERT
+
+- Embeddings
+- BERT
+- Mécanisme d'attention
+- Pré-entrainement et fine-tuning
+- Sentence-BERT
+
+### 2. Application au problème de classification des entreprises
+
+- Télécharger le modèle pré-entrainé
+- Fine-tuning sur nos données
+- Algorithme KNN pour la classification
+
+
+::: notes
+- La première partie vise à vous familiariser avec Sentence-BERT, un modèle de langage qui permet d'obtenir des représentations vectorielles (ou embeddings) de phrases.
+- Donc on va parler d'embeddings, de BERT (qui est un modèle d'embedding de mots développé par Google) et du mécanisme d'attention, qui est central dans tous les modèles de langage modernes.
+- On va ensuite regarder comment BERT est pré-entrainé, et comment on peut le fine-tuner pour l'adapter à une tâche particulière.
+- Finalement, on va voir comment Sentence-BERT permet d'obtenir des embeddings de phrases en se basant sur BERT.
+
+- Dans la deuxième partie, on va voir comment on a utilisé Sentence-BERT comme base pour bâtir un modèle de classification d'entreprises.
+:::
+
+
+
+# 1. Sentence-BERT
+
+## Embeddings
+
+### Encoder une chaine de caractères avec un vecteur de nombres réels
+
+![](images/embeddings.jpg)
+
+::: {.callout-warning appearance="simple"}
+En français, souvent traduit par **plongement** ou **représentation vectorielle**.
+:::
+
+::: notes
+- Un embedding, c'est simplement une chaine de caractères encodée sous forme d'un vecteur.
+- Ça peut être n'importe quelle chaine de caractères: un mot, un token, une phrase, un document, etc.
+- Important parce qu'un ordinateur ne peut pas traiter du texte, seulement des nombres.
+:::
+
+
+## Embeddings
+
+### Espace d'embedding
+
+- Un bon modèle d'embedding va positionner les mots (ou phrases) de sens similaire « près » les uns des autres dans l'espace d'embedding.
+- Dans cet exemple, nous avons un embedding en 2 dimensions, mais en pratique, les embeddings possèdent généralement un nombre beaucoup plus élevé de dimensions.
+
+![](images/embeddings_2.png)
+
+::: notes
+- Un bon modèle d'embeddings, c'est un modèle qui va placer des mots de sens similaire proches dans l'espace d'embeddings. À l'inverse, les mots de sens non-similaire doivent être éloignés.
+- Ici par exemple, on a obtenu un embedding en 2D pour les mots « roi », « reine », « pomme » et « banane ».
+- On voit que les embeddings créés semblent avoir du sens puisque « roi » et « reine », qui ont des sens similaires, sont proches dans l'espace d'embedding. Les embeddings de « pomme » et « banane » sont également proches, tandis que les 2 fruits et les 2 personnes sont éloignés.
+:::
+
+
+## Embeddings
+
+### « Interprétation » des dimensions
+
+<br>
+<br>
+<br>
+<br>
+
+- Les valeurs des embeddings peuvent être imaginées étant des « concepts »
+- Par exemple, une des dimensions pourraient être le degré de « félinité »
+- En pratique, ces concepts sont obscures et pas humainement identifiables
+
+![](images/embeddings_as_concepts.png){.absolute top=100 right=0}
+
+::: notes
+- On peut avoir une pseudo-interprétation pour les dimensions des embeddings.
+- Donc ici, on a des embeddings en 7 dimensions de plusieurs mots, et on peut s'imaginer que chaque dimension correspond à un concept.
+- Donc peut-être que la dimension 1 correspond au degré de « vie », la dimension 2 correspond au degré de « félinité », la troisième au degré d'humanité, etc.
+- Par exemple, le chat et le chaton ont un haut degré de félinité, tandis que la maison a un faible degré de félinité.
+- En pratique par contre, on ne peut pas vraiment associer chaque dimension à un concept qu'on peut interpréter, comme ici avec le degré de « vivant » et de « félinité ». 
+- Par contre, ça reste que chaque dimension est associée à un concept dont le modèle peut utiliser.
+:::
+
+
+## Pourquoi BERT?
+
+### Fournit des embeddings de mots contextualisés de haute qualité
+
+![](images/bert_puppet.png){.absolute top=164 right=30 width=350}
+
+::: {width='100%'}
+<br>
+
+- BERT: **B**idirectional **E**ncoder **R**epresentations from **T**ransformers
+- Développé par **[G]{style='color:#174EA6;'}[o]{style='color:#A50E0E;'}[o]{style='color:#FBBC04;'}[g]{style='color:#174EA6;'}[l]{style='color:#0D652D;'}[e]{style='color:#A50E0E;'}** en 2018
+:::
+
+<br>
+
+::: columns
+
+::: {.column width='33%'}
+[Pré-entrainé sur beaucoup de texte]{.three-green-blocks}  
+
+<div style='height:70px;'></div>
+
+::: {.ul-font-size-small}
+- BERT base: BooksCorpus (~800M mots)  
+- BERT large: Wikipédia anglais (~2500M mots)
+- Permet d'obtenir de bonnes performances même sans fine-tuning
+:::
+:::
+
+::: {.column width='33%'}
+[Embeddings contextualisés]{.three-green-blocks}
+
+<div style='height:70px;'></div>
+
+::: {.ul-font-size-small}
+- Contexte bidirectionnel  
+- D'anciens modèles comme Word2Vec et GloVe ne prenaient pas du tout en compte le contexte
+:::
+:::
+
+::: {.column width='33%'}
+[Open-source]{.three-green-blocks}
+
+<div style='height:70px;'></div>
+
+::: {.ul-font-size-small}
+- On peut le télécharger gratuitement sur [HuggingFace.co](HuggingFace.co)
+- On peut le fine-tuner sur une tâche particulière
+:::
+:::
+
+:::
+
+::: notes
+- Le modèle qui sert de base à notre modèle Sentence-BERT d'embedding de phrases s'appelle BERT.
+- C'est un modèle qui a été développé par Google et qui permet d'obtenir des embeddings de mots (ou plutôt de tokens).
+- C'est un modèle qu'on dit « encoder-only », parce que contrairement à des modèles génératifs comme GPT, on utilise seulement la partie « encodeuse » du transformer.
+- Donc le but n'est pas de générer du texte, mais seulement d'obtenir des embeddings de mots.
+
+- C'est un modèle puissant pour 2 raisons principales.
+- Premièrement, il a été pré-entrainé sur énormément de texte (sur plus de 3 milliards de mots), ce qui fait qu'il peut être utilisé directement sans être fine-tuné.
+- Deuxièmement, c'est un modèle basé sur l'architecture transformer, qui permet d'obtenir des embeddings contextualisés de haute qualité, tout en étant hautement paraléllisable.
+- C'est un modèle open-source, donc n'importe qui peut le télécharger et l'utiliser directement, ou bien le fine-tuner sur une tâche particulière.
+
+- J'ajouterais également que BERT est relativement léger avec ses 110 millions de paramètres pour la version de base, ce qui permet de rapidement obtenir des embeddings, même sur un laptop.
+:::
+
+
+## Architecture de BERT
+
+### Une pile d'encodeurs « transformer »
+
+- BERT est un réseau de neurones composé de 12 (BERT base) ou 24 (BERT large) modules de type «\ transformer\ » (partie « encodeur » seulement).
+
+[Transformer (ENCODER)]{.absolute top=650 left=50}
+
+![](images/transformer-encoder.png){.absolute top=265 left=50 width=200}
+
+![](images/bert-base-bert-large-encoders.png){.absolute top=240 left=500 width=700}
+
+::: notes
+- L'architecture de BERT ressemble à ça. En gros, c'est un pile de blocs « transformer », plus précisément la partie « encodeuse » seulement.
+- La version de base contient 12 de ces blocs, tandis que la grande version en a 24.
+- Donc un bloc transformer, ça ressemble à ça. En gros, ça reçoit un input et ça va le passer à travers plusieurs fonctions mathématiques, dont l'attention multi-tête, qui est la clé pour comprendre le contexte de mots (je vais parler du mécanisme d'attention dans la prochaine slide).
+- Donc ce que le modèle fait en gros, c'est qu'il va partir d'un embedding fixe non-contextualisé (disons le embedding du mot « apple ») qu'il va passer à travers tous les blocs transformer pour obtenir un embedding de « apple » contextualisé.
+- Et le rôle des blocs transformers en fait, c'est de modifier le embedding de « apple » en utilisant les embeddings de tous les mots qui sont autour du mot « apple ». 
+:::
+
+
+## Mécanisme d'attention
+
+### Permet de contextualiser les embeddings
+
+::: columns
+
+::: {.column width='40%'}
+![](images/attention.png){width="80%"}
+:::
+
+::: {.column width='60%'}
+<br>
+<br>
+![](images/attention-luis.png){width="100%"}
+:::
+
+:::
+
+::: notes
+- Le mécanisme d'attention, ça a été développé en 2017 dans l'article « Attention is all you need », et c'est grâce à ça qu'on a aujourd'hui des grands modèles de langage comme BERT, GPT, Llama ou Gemini.
+- En plus de bien capturer le contexte des mots, c'est une architecture qui est hautement parallélisable et qui permet donc d'entrainer rapidement les modèles si on a un GPU.
+- Donc comme je vous disais, c'est le mécanisme d'attention dans le transformer qui permet de modifier les embeddings des mots en utilisant les embeddings des mots voisins, et ça fait ça en utilisant un mécanisme assez complexe.
+- Donc supposons qu'on a un embedding non-contextualisé pour le mot « apple ». C'est un peu tannant, parce que « apple » peut désigner soit le fruit, soit la compagnie.
+- Ce que l'attention fait, c'est qu'elle va faire bouger l'embedding de « apple » en utilisant les mots autour.
+- Par exemple, dans la phrase « please buy me an apple and an orange », on a le mot « orange » qui va tirer le mot « apple » vers lui, ce qui va nous créer un embedding de « apple » spécialement fait pour cette phrase.
+- De la même manière, dans la phrase « apple unveiled the new phone », l'embedding de « apple » va être tiré vers l'embedding du mot « phone », et donc dans cette phrase, « apple » a plus de chance d'être interprété comme étant la compagnie Apple.
+- Il faut noter que « apple » (ainsi que tous les autres mots dans la fenêtre de contexte) va être influencé par tous les autres mots dans la fenêtre de contexte.
+:::
+
+
+## Pré-entrainement vs fine-tuning
+
+::: columns
+
+::: {.column width='50%'}
+**Pré-entrainement**  
+![](images/pretraining.png){width='80%' fig-align='center'}
+:::
+
+::: {.column width='50%'}
+**Fine-tuning**  
+![](images/finetuning.png){width='78%' fig-align='center'}
+:::
+
+:::
+
+::: notes
+- Donc je vous ai parlé de pré-entrainement et de fine-tuning. À quoi ça correspond exactement?
+- Le pré-entrainement, ça se résume à faire apprendre la langue au modèle. Donc les patterns de la langue, la grammaire, la syntaxe, etc.
+- Pour ce faire, on va entrainer le modèle sur des grandes quantités de texte. Donc par exemple, sur Wikipédia au grand complet.
+- Et pour BERT, la méthode utilisée pour le pré-entrainer s'appelle *masked language modeling*. Ça consiste à cacher certain mots au modèle de manière aléatoire, et on demande au modèle de deviner le mot. On a ensuite une fonction de perte qui va punir le modèle pour ses erreurs, et avec la rétro-propagation et la descente de gradient, on peut aller mettre à jour les poids du modèle.
+
+- On peut utiliser le modèle pré-entrainé directement, mais on va avoir de meilleures performances si on le fine-tune sur notre tâche à accomplir.
+- Donc dans l'étape du fine-tuning, on prend le modèel pré-entrainé et on l'entraine de nouveau sur notre jeu de données.
+- Par exemple, ici on a fine-tuné BERT sur une tâche de classification de courriels (pourriel ou courriel légitime).
+- On a ajouté une tête de classification au modèle, qui permet de transformer la sortie de BERT en probabilité d'être un pourriel.
+- On va ensuite aller faire l'entrainement en utilisant un jeu de données de courriels étiquetés « spam » ou « not-spam ».
+- Donc en gros, dans cette étape de fine-tuning, les poids du modèle vont être modifiés de telle sorte que la tâche à accomplir est optimisée.
+:::
+
+
+## Limites de BERT
+
+### Embeddings de phrases de basse qualité
+
+- BERT est conçu pour créer des embeddings de mots.
+- Possible d'encoder des phrases^[Soit en prenant la moyenne des embeddings de tous les mots de la phrase, soit en prenant l'embedding du token [CLS].], mais les embeddings sont de mauvaise qualité.
+
+![](images/scores-embeddings.png){style='margin-top: 0px;'}^[Source: [https://arxiv.org/pdf/1908.10084](https://arxiv.org/pdf/1908.10084). Ici, un nombre élevé se traduit par une bonne performance.]
+
+::: notes
+- Une grosse limite de BERT est qu'il ne permet pas d'obtenir des embeddings de phrases (seulement de mots, ou tokens).
+- En fait, c'est possible d'obtenir des embeddings de phrases, soit en prenant la moyenne des embeddings de mots ou en prenant le embedding du token spécial CLS, mais ça donne des embeddings de mauvaise qualité.
+- La colonne « Avg. » ici nous dit que les embeddings de phrases obtenus avec BERT sont moins bons que ceux obtenus avec GloVe, un modèle développé en 2014 qui créée des embeddings non-contextualisés.
+- Pour notre application, on veut obtenir des embeddings pour nos descriptions d'entreprises, donc on a besoin d'un modèle d'embedding de phrases. Il va donc falloir modifier un peu BERT.
+:::
+
+
+## Sentence-BERT
+
+#### Modifier BERT pour encoder des phrases
+
+::: {.ul-font-size-medium}
+- Architecture **siamoise** à l'entrainement utilisant un modèle **BERT pré-entrainé** (les poids sont identiques dans les 2 blocs BERT).
+- La couche de **pooling** permet d'obtenir un  embedding de phrase à partir des embeddings de mots.
+- Entrainé sur le corpus SNLI: 570 000 paires de phrases annotées [**contradiction**]{style='color:#A50E0E;'}, [**implication**]{style='color:#0D652D;'} ou [**neutre**]{style='color: #a8aabc;'}.
+:::
+
+::: columns
+
+::: {.column width='50%' style='text-align: center;'}
+[À l'entrainement]{style='text-decoration: underline;'}
+
+![](images/sbert_1.png){width=300 fig-align="center"}
+:::
+
+::: {.column width='50%' style='text-align: center;'}
+[À l'inférence]{style='text-decoration: underline;'}
+
+![](images/sbert_2.png){width=130 fig-align="center"}
+:::
+
+:::
+
+[Figures tirées de [Hands-On Large Language Models -- Jay Alammar et Maarten Grootendorst](https://www.oreilly.com/library/view/hands-on-large-language/9781098150952/)»]{.absolute bottom=-30 left='50%' style='font-size: 17px;'}
+
+::: notes
+- Donc ça nous amène à SBERT, qui est une modification de BERT pour faire des embeddings de phrases.
+- C'est un réseau siamois (à l'entrainement) qui contient 2 modèles BERT avec les poids liés (en fait, c'est 2 copies du même modèle).
+- On a une couche de pooling qui permet de transformer les embeddings de mots en embedding de phrase.
+- Donc on prend BERT pré-entrainé et la couche de pooling qu'on arrange en un réseau siamois, et on va aller entrainer cette architecture sur un jeu de données de paires de phrases annotées contradiction, implication, ou neutre.
+- Donc on prend chacune des 2 phrases, qu'on va passer au modèle BERT. Ensuite, la sortie de BERT va être donnée à la couche de pooling, qui va nous sortir un embedding de phrase. Ensuite, on va concaténer les 2 embeddings en plus de la différence absolue élément par élément, et c'est ce vecteur qui va être utilisé pour la classification entre « contradiction », « implication » ou « neutre ».
+
+- Une fois le modèle entrainé, on peut se débarasser de l'architecture siamoise et garder seulement BERT + pooling.
+- Donc en fait, ce qui améliore les embeddings de phrase, c'est vraiment l'étape d'entrainement sur les paires de phrases.
+:::
+
+
+# 2. Application au problème de classification d'entreprises
+
+
+## Télécharger le modèle pré-entrainé
+
+
+![](images/codeimage-snippet_21.svg){.absolute width=800 top=50 left=-60}
+
+![](images/encode_snippet.svg){.absolute width=600 top=50 right=0}
+
+::: {style='margin-top:370px; font-size: 25px;'}
+| Phrase                      | dim_1     | dim_2     | ... | dim_768     |
+|-----------------------------|-----------|-----------|-----|-------------|
+| That is a happy person      | -0.0203 | -0.0104 | ... | -0.0053 |
+| That is a happy dog         | -0.0196 | -0.0323 | ... | -0.0274 |
+| That is a very happy person | -0.0136 | 0.0043  | ... | -0.0054 |
+| Today is a sunny day        | -0.0075 | -0.0023 | ... | 0.0078  |
+:::
+
+On peut tester le modèle [ici](https://huggingface.co/sentence-transformers/all-mpnet-base-v2).
+
+::: notes
+- On peut facilement télécharger le modèle à partir du site HuggingFace en utilisant la librairie « sentence_transformers ».
+- Le modèle qu'on utilise n'est pas exactement le SBERT original, mais quelque chose de très similaire. C'est le modèle de base, donc celui avec 12 blocs transformers et 110 millions de paramètres.
+- On peut commencer à l'utiliser directement pour obtenir des embeddings de phrases avec la méthode « encode ».
+:::
+
+
+## Fine-tuner le modèle pré-entrainé
+
+### Données
+
+::: {.fragment .fade-in-then-out}
+
+::: {style='font-size: 25px; position: absolute; top: 180px; left: 0px;'}
+IBC Codes
+
+| Index | IBC Code | IBC Code Description |
+|-|--|----|
+| 1 | 0735a10   | Architects - Landscaping Only |
+| 2 | 8916a10 | Engineers |
+| 3 | 8075a10 | Sanitariums |
+| 4 | 5813a10 | Coffee shops (warming of food only, no roasting of beans) |
+| ... | ... | ... |
+| 1260 | 3496a10 | Electronic games |
+:::
+
+:::
+
+::: {.fragment .fade-in}
+
+::: {style='font-size: 25px; position: absolute; top: 180px; left: 0px;'}
+Entreprises
+
+| Index | Company Description | IBC Code |
+|-|----|----|
+| 1 | Takeout meals-see policy, coding only | 5814a10  -- Take out meals |
+| 2 | Construction of church building extension | 1830a20  -- Building construction - general contr. |
+| 3 | Construction and renovation of gas stations including installation and removal of underground tanks and related pumps, carwash facilities.  Snow clearing. | 1782a40 -- Underground storage tank - remediation contractors |
+| ... | ... | ... |
+| 136 000 | Licensed Restaurant | 5812a10  -- Restaurants - licensed (Not liquor revenue) |
+:::
+
+:::
+
+::: notes
+- La tâche qu'on veut accomplir est la suivante.
+- Lorsqu'on assure une entreprise, le souscripteur doit lui assigner un code IBC parmi 1260 codes, ce qui n'est pas toujours évident.
+- L'outil qu'on a créé permet de suggérer des codes IBC lorsqu'on fournit une description d'entreprise.
+- Puisqu'on veut associer une entreprise à un code IBC, on va fine-tuner le modèle pour qu'il apprenne à rapprocher les entreprise de leur code IBC correspondant.
+
+- Pour ça, on a 2 jeu de données. Le premier contient tous les codes et leur description, tandis que le deuxième contient 136 000 entreprises qu'on a assurées dans le passé avec leur code IBC associé.
+
+:::
+
+
+## Fine-tuner le modèle pré-entrainé
+
+### Procédure
+
+On génère d'abord 136 000 (autant qu'il y a d'entreprises) [**paires positives**]{style='color: #007d57;'} et 136 000 [**paires négatives**]{style='color: #650b22;'}.
+
+::: {.ul-font-size-medium}
+- [**paire positive**]{style='color: #007d57;'}: description de l'entreprise + description de son IBC code [**correspondant**]{style='color: #007d57;'}
+- [**paire négative**]{style='color: #650b22;'}: description de l'entreprise + description d'un IBC code [**non-correspondant**]{style='color: #650b22;'}
+:::
+
+
+::: {style='font-size: 24px;'}
+| Pair ID | Company Description | IBC Code Description | Label |
+|-|----|----|---|
+| 1 | Construction of church building extension | Building construction - general contr. | [**Positive pair**]{style='color: #007d57;'} |
+| 2 | Construction of church building extension | Take out meals | [**Negative pair**]{style='color: #650b22;'} |
+| 3 | Licensed restaurant | Restaurants - licensed (Not liquor revenue) | [**Positive pair**]{style='color: #007d57;'} |
+| 4 | Licensed restaurant | Building construction - general contr. | [**Negative pair**]{style='color: #650b22;'} |
+| ... | ... | ... | ... |
+:::
+
+On va ensuite entrainer le modèle à rapprocher les [**paires positives**]{style='color: #007d57;'} et à éloigner les [**paires négatives**]{style='color: #650b22;'} en utilisant une fonction de perte et la descente de gradient.
+
+
+::: notes
+- La première étape est de se créer un jeu de données étiqueté. On va se créer 136 00 paires de phrases positives et 136 000 paires négatives.
+- Une paire positive, c'est une description d'entreprise couplée avec la description de son code IBC correspondant.
+- Une paire négative, c'est une description d'entreprise couplée avec une description de code IBC non-correspondant.
+- L'algorithme d'entrainement est alors déclenché pour modifier les paramètres du modèle de telle sorte que les entreprises sont rapprochées de leur IBC code correspondant (et éloignées de leurs codes IBC non-correspondants).
+:::
+
+
+## Algorithme de classification
+
+### K plus proches voisin avec poids « softmax modifié »
+
+**Exemple:**
+
+« Small business manufacturing and selling equipment for hockey referees. »
+
+![](images/similar_cies.png)
+
+
+[https://rstudiotest.cgic.ca/ibc_code_selector_app/](https://rstudiotest.cgic.ca/ibc_code_selector_app/)
+
+::: notes
+- On a maintenant un bon modèle d'embedding de descriptions d'entreprise et d'IBC codes.
+- On peut donc obtenir un vecteur d'embedding pour chaque IBC code et pour chaque entreprise.
+- On peut maintenant faire du machine learning classique pour obtenir des suggestions.
+- Pour faire la classification, on a utilisé un algorithme des K plus proches voisins pondérés.
+- Par exemple, si cette description est donnée en entrée, le modèle va d'abord calculer l'embedding. 
+- Ensuite, on va calculer la similarité cosinus avec chacune des entreprise dans le jeu de données.
+- Un poids est alors calculé pour chaque entreprise. Plus la description est similaire, plus le poids sera élevé.
+- Ensuite, on additionne les poids pour chaque code, et on va suggérer les 5 codes IBC qui ont le plus gros poids.
+:::
+
+
+## Applications possibles
+
+### BERT et Sentence-BERT
+
+- **Classification de texte** --- Classifier des textes en différentes catégories, comme la détection de pourriels, l'analyse de sentiments, ou la classification de sujets.  
+- **Reconnaissance d'entités nommées (NER)** --- Identifier et classifier les entités nommées dans un texte, telles que les noms de personnes, d'organisations, de lieux, etc.  
+- **Extraction de covariables** --- Extraire de l'information structurée à partir de texte pour utilisation dans un modèle classique d'apprentissage automatique.  
+- **Synthèse de texte** --- Extraire l'information pertinente d'un texte.  
+- **Etc.**
+
+
+## Ressources
+
+<br>
+
+::: {.ul-font-size-medium}
+- [Hands-On Large Language Models -- Jay Alammar et Maarten Grootendorst](https://www.oreilly.com/library/view/hands-on-large-language/9781098150952/)
+- [The Illustrated Transformer -- Jay Alammar](https://jalammar.github.io/illustrated-transformer/)  
+- [The Attention Mechanism in Large Language Models -- Luis Serrano](https://www.youtube.com/watch?v=OxCpWwDCDFQ)  
+- [Attention in transformers, visually explained -- 3Blue1Brown](https://www.youtube.com/watch?v=eMlx5fFNoYc)
+:::
+
+
+# 3. Annexe {visibility='uncounted'}
+
+## Résumé {.small-text-slide visibility='uncounted'}
+
+Les grands modèles de langage de type « encodeurs » permettent d'encoder des chaînes de caractères sous forme de vecteurs appelés « embeddings ». Ces modèles sont des réseaux de neurones comprenant habituellement un grand nombre de paramètres et sont pré-entraînés sur un vaste ensemble de données textuelles. La clé de leur succès réside dans l'architecture *transformers*, qui comprend un « mécanisme d'auto-attention » (self-attention mechanism), développé en 2017 dans un article intitulé « Attention is All You Need ». Ce mécanisme d'auto-attention permet, entre autres, de bien capturer le contexte des mots. Cela les rend particulièrement bien adaptés à une panoplie de tâches, y compris le calcul de similarités entre des phrases. Un modèle de langage populaire est BERT, développé par Google. Sentence-BERT représente une amélioration par rapport à BERT pour l'encodage de phrases, car il permet, grâce à son architecture siamoise, d'obtenir de meilleurs embeddings et d'accélérer le calcul des similarités.
+
+Lorsqu'une entreprise s'assure chez Co-operators, un souscripteur est chargé de lui assigner le bon code « IBC », ce qui n'est parfois pas évident puisque ces codes sont au nombre d'environ 1300. Dans un récent projet, nous avons utilisé Sentence-BERT dans un outil qui aide les souscripteurs à assigner le bon code IBC aux entreprises. Nous avons d'abord téléchargé le modèle pré-entrainé que nous avons fine-tuné sur un jeu de données interne. Le modèle entrainé permet d'obtenir, pour n'importe quelle description d'entreprise, une représentation vectorielle en 20 dimensions. Les vecteurs ainsi obtenus nous permettent de classifier les entreprises parmi les quelques 1300 codes IBC à l'aide d'un algorithme des k plus proches voisins.
+
+## BERT vs Sentence-BERT {visibility='uncounted'}
+
+**BERT**
+
+- Requiert de concaténer 2 phrases pour ensuite les passer dans le modèle pour obtenir une similarité (ex: [CLS] Sentence1 [SEP] Sentence2 [SEP]).
+- Cela est computationellement coûteux et pas adapté lorsqu'il y a beaucoup de comparaisons à faire.
+
+
+**SBERT**
+
+- Encode chaque phrase indépendamment en un vecteur de dimension fixe. La similarité entre 2 phrases peut ensuite être calculée, par exemple en calculant le cosinus de l'angle entre les 2 phrases (similarité cosinus).
+- Cela réduit considérablement le temps de calcul, car on n'a pas à repasser les phrases à chaque fois dans le modèle.
+
+
+## Jeu de données SNLI {visibility='uncounted'}
+
+![](images/examples_snli.png)
+
