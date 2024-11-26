@@ -17,7 +17,7 @@ format:
     chalkboard: true
     transition: slide
     logo: images/logo_blue_2.png
-    # footer: 'footer'
+    footer: '[https://github.com/francisduval/presentation_uqam_3_decembre_2024](https://github.com/francisduval/presentation_uqam_3_decembre_2024)'
     slide-number: c/t
     code-block-height: 500px
 editor: 
