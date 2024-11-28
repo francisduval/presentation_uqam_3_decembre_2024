@@ -28,6 +28,8 @@ include-after-body: add-custom-footer.html
 
 ## Mon parcours
 
+Montrer l'inference API de SBERT.
+
 ### Académique
 
 ::: columns
