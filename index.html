@@ -10,7 +10,7 @@
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.553">
 
-  <meta name="author" content="Francis Duval, Chercheur Scientifique | Co-operators">
+  <meta name="author" content="Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique">
   <title>L’intelligence d’affaires chez Co-operators</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -334,7 +334,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Francis Duval, Chercheur Scientifique | Co-operators 
+Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique 
 </div>
 <div class="quarto-title-author-email">
 <a href="mailto:francis_duval@cooperators.ca">francis_duval@cooperators.ca</a>
@@ -347,7 +347,6 @@ Francis Duval, Chercheur Scientifique | Co-operators
 </section>
 <section id="mon-parcours" class="slide level2">
 <h2>Mon parcours</h2>
-<p>Montrer l’inference API de SBERT.</p>
 <h3 id="académique">Académique</h3>
 <div class="columns">
 <div class="column" style="width:33%;">
@@ -392,6 +391,33 @@ Francis Duval, Chercheur Scientifique | Co-operators
 <ul>
 <li>Chercheur scientifique dans l’équipe « Recherche et Innovation Analytique » depuis septembre 2023.</li>
 </ul>
+<aside class="notes">
+<ul>
+<li><p>Baccalauréat en Actuariat, où j’ai eu 2 stages en assurance de dommages chez Co-operators.</p></li>
+<li><p>Session à l’étranger à l’Institut de Science Financière et d’Assurance (ISFA).</p></li>
+<li><p>Ensuite, j’ai fait une maitrise en mathématiques actuarielles et financière, toujours à l’UQAM.</p></li>
+<li><p>J’ai eu la chance durant ma maitrise de faire un stage de recherche Mitacs chez Desjardins. Mitacs est un organisme de recherche sans but lucratif qui offre des bourses de recherche.</p></li>
+<li><p>Durant ce stage chez Desjardins, j’ai développé un modèle d’évaluation des réserves en utilisant un algorithme de gradient boosting. C’est un modèle de réserve au niveau individuel, c’est-à-dire que contrairement à des modèles comme Chain-Ladder, on a essayer de prédire un montant pour chaque réclamation, de manière individuelle.</p></li>
+<li><p>Ce qui était bien avec ce stage, c’est que le modèle que j’ai développé a servi pour mon mémoire de maitrise, et j’ai même publié un article avec Mathieu Pigeon. Donc c’est faire d’une pierre deux coups.</p></li>
+<li><p>Suite à ma maitrise, j’ai eu une offre de Jean-Philippe et Mathieu Pigeon pour continuer mes études au sein de la Chaire CARA, qui venait tout juste d’être mise sur pieds. Comme j’avais aimé mon expérience de recherche à la maitrise, et que je trouvais que l’UQAM offrait une solide expertise en assurance de dommages avec des professeurs comme Jean-Philippe et Mathieu en plus du partenariat avec Co-operators, j’ai décidé de commencer un doctorat. De plus, le financement était excellent.</p></li>
+<li><p>Dans le doctorat, il y a quelques cours au début, mais le but est surtout de faire de la recherche. J’ai fait ce qu’on appelle une thèse par article, qui consiste en 3 articles. Les articles sont ensuite mis ensemble pour constituer la thèse.</p></li>
+<li><p>Ma thèse portait sur la modélisation des sinistres en assurance automobile avec l’utilisation de données télématiques.</p></li>
+<li><p>Des données télématiques, ce sont des données collectées sur la conduite des assurés grâce à un dispositif installé dans le véhicule ou grâce à une application mobile.</p></li>
+<li><p>Par exemple, mon troisième article était une application d’une architecture spéciale de réseau de neurones appelée « Combined Actuarial Neural Network (CANN) ». On a utilisé cette architecture pour inclure les données télématiques dans la tarification en plus des variables classique comme l’âge de l’assuré ou le modèle du véhicule. Plus spécifiquement, on a adapté l’architecture CANN à un modèle longitudinal qui utilise la distribution binomiale négative multivariée. On prend donc en compte la dépendance entre les années.</p></li>
+<li><p>J’ai eu l’occasion également de voyager durant ma maitrise et mon doctorat (sauf durant la pandémie) pour assister (ou présenter) à des conférences. La Chaire CARA offre un assez bon budget pour les conférences à chaque année. Je suis allé entre autres à Vancouver, à Calgary et à Chicago. Ce qui est bien, c’est qu’il est possible de prendre des vacances suite à une conférence, ce qui permet d’économiser sur le transport.</p></li>
+<li><p>Et depuis un peu plus d’un an, je suis chercheur scientifique dans l’équipe de Recherche et Innovation Analytique chez Co-operators, où j’ai déjà eu l’occasion de travailler sur 5 projets.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="quest-ce-que-lintelligence-daffaires" class="slide level2">
 <h2>Qu’est-ce que l’intelligence d’affaires?</h2>
@@ -431,8 +457,109 @@ Francis Duval, Chercheur Scientifique | Co-operators
 </div>
 </div>
 <p><img data-src="images/dashboard.png" class="absolute" style="top: 0px; right: 0px; width: 200px; "></p>
+<aside class="notes">
+<ul>
+<li>2 grands départements chez Co-operators: Actuariat et Intelligence d’Affaires. Qu’est-ce que l’intelligence d’affaires exactement?</li>
+<li>En fait, le but de l’intelligence d’affaire est de tirer le plus de valeur possible des données.</li>
+<li>Les données peuvent être sous n’importe quelle forme: données tabulaires, données textuelles, données temporelles, données d’images, données géospatiales, données audio, etc.</li>
+<li>Par contre, les données ne parlent pas d’elles-mêmes. Par exemple, on peut difficilement tirer des conclusions en observant à l’oeil une table de données. Il faut donc les faire « parler » en utilisant tous les moyens possibles: programmation, machine learning, deep learning, IA, théorie des valeurs extrêmes, et plusieurs autres modèles de toute sorte.</li>
+<li>On produit alors des outils qui nous aident à tirer profit des données et de prendre les bonnes décisions, comme des modèles, des applications, des tableaux de bord, des visualisations, etc.</li>
+<li>Par rapport au département d’actuariat, on s’éloigne de l’actuariat « classique », mais nos compétences en actuariat sont tout de même utiles puisque le bacc en actuariat contient beaucoup de science des données et qu’on reste quand même dans une compangie d’assurance.</li>
+<li>Par rapport au département d’actuariat, je pense qu’on fait plus de programmation, entre autres.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="exemples-de-projets-sélecteur-de-codes-ibc" class="slide level2">
+<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<h4 id="embeddings-encoder-une-phrase-ou-un-mot-avec-un-vecteur-de-nombres-réels">Embeddings = Encoder une phrase (ou un mot) avec un vecteur de nombres réels</h4>
+
+<img data-src="images/embeddings.jpg" class="r-stretch"><p>Les mots/phrases similaires doivent être proches dans l’espace d’embedding.</p>
+<aside class="notes">
+<ul>
+<li>Un embedding, c’est simplement une chaine de caractères encodée sous forme d’un vecteur.</li>
+<li>Ça peut être n’importe quelle chaine de caractères: un mot, un token, une phrase, un document, etc.</li>
+<li>Important parce qu’un ordinateur ne peut pas traiter du texte, seulement des nombres.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exemples-de-projets-sélecteur-de-codes-ibc-1" class="slide level2">
+<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<h3 id="espace-dembedding">Espace d’embedding</h3>
+<ul>
+<li>Un bon modèle d’embedding va positionner les mots (ou phrases) de sens similaire « près » les uns des autres dans l’espace d’embedding.</li>
+<li>Dans cet exemple, nous avons un embedding en 2 dimensions, mais en pratique, les embeddings possèdent généralement un nombre beaucoup plus élevé de dimensions.</li>
+</ul>
+
+<img data-src="images/embeddings_2.png" class="r-stretch"><aside class="notes">
+<ul>
+<li>Un bon modèle d’embeddings, c’est un modèle qui va placer des mots de sens similaire proches dans l’espace d’embeddings. À l’inverse, les mots de sens non-similaire doivent être éloignés.</li>
+<li>Ici par exemple, on a obtenu un embedding en 2D pour les mots « roi », « reine », « pomme » et « banane ».</li>
+<li>On voit que les embeddings créés semblent avoir du sens puisque « roi » et « reine », qui ont des sens similaires, sont proches dans l’espace d’embedding. Les embeddings de « pomme » et « banane » sont également proches, tandis que les 2 fruits et les 2 personnes sont éloignés.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exemples-de-projets-sélecteur-de-codes-ibc-2" class="slide level2">
+<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<h3 id="interprétation-des-dimensions">« Interprétation » des dimensions</h3>
+<p><br> <br> <br> <br></p>
+<ul>
+<li>Les valeurs des embeddings peuvent être imaginées étant des « concepts ».</li>
+<li>Par exemple, une des dimensions pourraient être le degré de « félinité ».</li>
+<li>En pratique, ces concepts sont obscures et pas humainement identifiables.</li>
+</ul>
+<p><img data-src="images/embeddings_as_concepts.png" class="absolute" style="top: 100px; right: 0px; "></p>
+<aside class="notes">
+<ul>
+<li>On peut avoir une pseudo-interprétation pour les dimensions des embeddings.</li>
+<li>Donc ici, on a des embeddings en 7 dimensions de plusieurs mots, et on peut s’imaginer que chaque dimension correspond à un concept.</li>
+<li>Donc peut-être que la dimension 1 correspond au degré de « vie », la dimension 2 correspond au degré de « félinité », la troisième au degré d’humanité, etc.</li>
+<li>Par exemple, le chat et le chaton ont un haut degré de félinité, tandis que la maison a un faible degré de félinité.</li>
+<li>En pratique par contre, on ne peut pas vraiment associer chaque dimension à un concept qu’on peut interpréter, comme ici avec le degré de « vivant » et de « félinité ».</li>
+<li>Par contre, ça reste que chaque dimension est associée à un concept dont le modèle peut utiliser.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exemples-de-projets-sélecteur-de-codes-ibc-3" class="slide level2">
 <h2>Exemples de projets — Sélecteur de codes IBC</h2>
 <h3 id="résumé-du-problème">Résumé du problème</h3>
 <ul>
@@ -491,13 +618,7 @@ Francis Duval, Chercheur Scientifique | Co-operators
 </div>
 </div>
 </section>
-<section id="exemples-de-projets-sélecteur-de-codes-ibc-1" class="slide level2">
-<h2>Exemples de projets — Sélecteur de codes IBC</h2>
-<h4 id="embeddings-encoder-une-phrase-ou-un-mot-avec-un-vecteur-de-nombres-réels">Embeddings = Encoder une phrase (ou un mot) avec un vecteur de nombres réels</h4>
-
-<img data-src="images/embeddings.jpg" class="r-stretch"><p>Les mots/phrases similaires doivent être proches dans l’espace d’embedding.</p>
-</section>
-<section id="exemples-de-projets-sélecteur-de-codes-ibc-2" class="slide level2">
+<section id="exemples-de-projets-sélecteur-de-codes-ibc-4" class="slide level2">
 <h2>Exemples de projets — Sélecteur de codes IBC</h2>
 <p><br></p>
 <p>Par exemple, quel code doit-on assigner à l’entreprise: <br> <span style="color: #FFFFFF; background-color: #007d57; border-radius: 5px; padding: 2px 5px;">Small business manufacturing and selling equipment for hockey referees</span>?</p>
@@ -512,7 +633,521 @@ Francis Duval, Chercheur Scientifique | Co-operators
 </ol>
 </div>
 <p>Les embeddings sont obtenus avec un modèle de langage appelé « Sentence-BERT ».</p>
-<p><img data-src="images/sbert_1.png" class="absolute" style="top: 200px; right: -25px; width: 350px; "></p>
+<p><img data-src="images/sbert_2.png" class="absolute" style="top: 160px; right: 30px; width: 170px; "></p>
+</section>
+<section id="exemples-de-projets-sélecteur-de-codes-ibc-5" class="slide level2">
+<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<h3 id="bert-fournit-des-embeddings-de-mots-contextualisés-de-haute-qualité">BERT: fournit des embeddings de mots contextualisés de haute qualité</h3>
+<p><img data-src="images/bert_puppet.png" class="absolute" style="top: 164px; right: 30px; width: 350px; "></p>
+<div width="100%">
+<p><br></p>
+<ul>
+<li>BERT: <strong>B</strong>idirectional <strong>E</strong>ncoder <strong>R</strong>epresentations from <strong>T</strong>ransformers</li>
+<li>Développé par <strong><span style="color:#174EA6;">G</span><span style="color:#A50E0E;">o</span><span style="color:#FBBC04;">o</span><span style="color:#174EA6;">g</span><span style="color:#0D652D;">l</span><span style="color:#A50E0E;">e</span></strong> en 2018</li>
+</ul>
+</div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><span class="three-green-blocks">Pré-entrainé sur beaucoup de texte</span></p>
+<div style="height:70px;">
+
+</div>
+<div class="ul-font-size-small">
+<ul>
+<li>BERT base: BooksCorpus (~800M mots)<br>
+</li>
+<li>BERT large: Wikipédia anglais (~2500M mots)</li>
+<li>Permet d’obtenir de bonnes performances même sans fine-tuning</li>
+</ul>
+</div>
+</div><div class="column" style="width:33%;">
+<p><span class="three-green-blocks">Embeddings contextualisés</span></p>
+<div style="height:70px;">
+
+</div>
+<div class="ul-font-size-small">
+<ul>
+<li>Contexte bidirectionnel<br>
+</li>
+<li>D’anciens modèles comme Word2Vec et GloVe ne prenaient pas du tout en compte le contexte</li>
+</ul>
+</div>
+</div><div class="column" style="width:33%;">
+<p><span class="three-green-blocks">Open-source</span></p>
+<div style="height:70px;">
+
+</div>
+<div class="ul-font-size-small">
+<ul>
+<li>On peut le télécharger gratuitement sur <a href="HuggingFace.co">HuggingFace.co</a></li>
+<li>On peut le fine-tuner sur une tâche particulière</li>
+</ul>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li><p>Le modèle qui sert de base à notre modèle Sentence-BERT d’embedding de phrases s’appelle BERT.</p></li>
+<li><p>C’est un modèle qui a été développé par Google et qui permet d’obtenir des embeddings de mots (ou plutôt de tokens).</p></li>
+<li><p>C’est un modèle qu’on dit « encoder-only », parce que contrairement à des modèles génératifs comme GPT, on utilise seulement la partie « encodeuse » du transformer.</p></li>
+<li><p>Donc le but n’est pas de générer du texte, mais seulement d’obtenir des embeddings de mots.</p></li>
+<li><p>C’est un modèle puissant pour 2 raisons principales.</p></li>
+<li><p>Premièrement, il a été pré-entrainé sur énormément de texte (sur plus de 3 milliards de mots), ce qui fait qu’il peut être utilisé directement sans être fine-tuné.</p></li>
+<li><p>Deuxièmement, c’est un modèle basé sur l’architecture transformer, qui permet d’obtenir des embeddings contextualisés de haute qualité, tout en étant hautement paraléllisable.</p></li>
+<li><p>C’est un modèle open-source, donc n’importe qui peut le télécharger et l’utiliser directement, ou bien le fine-tuner sur une tâche particulière.</p></li>
+<li><p>J’ajouterais également que BERT est relativement léger avec ses 110 millions de paramètres pour la version de base, ce qui permet de rapidement obtenir des embeddings, même sur un laptop.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exemples-de-projets-sélecteur-de-codes-ibc-6" class="slide level2">
+<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<h3 id="architecture-de-bert-une-pile-dencodeurs-transformer">Architecture de BERT: une pile d’encodeurs « transformer »</h3>
+<ul>
+<li>BERT est un réseau de neurones composé de 12 ou 24 modules de type «&nbsp;transformer&nbsp;».</li>
+<li>BERT « base »: 110 millions de paramètres.</li>
+</ul>
+<p><span class="absolute" style="top: 650px; left: 50px; ">Transformer (ENCODER)</span></p>
+<p><img data-src="images/transformer-encoder.png" class="absolute" style="top: 265px; left: 50px; width: 200px; "></p>
+<p><img data-src="images/bert-base-bert-large-encoders.png" class="absolute" style="top: 240px; left: 500px; width: 700px; "></p>
+<aside class="notes">
+<ul>
+<li>L’architecture de BERT ressemble à ça. En gros, c’est un pile de blocs « transformer », plus précisément la partie « encodeuse » seulement.</li>
+<li>La version de base contient 12 de ces blocs, tandis que la grande version en a 24.</li>
+<li>Donc un bloc transformer, ça ressemble à ça. En gros, ça reçoit un input et ça va le passer à travers plusieurs fonctions mathématiques, dont l’attention multi-tête, qui est la clé pour comprendre le contexte de mots (je vais parler du mécanisme d’attention dans la prochaine slide).</li>
+<li>Donc ce que le modèle fait en gros, c’est qu’il va partir d’un embedding fixe non-contextualisé (disons le embedding du mot « apple ») qu’il va passer à travers tous les blocs transformer pour obtenir un embedding de « apple » contextualisé.</li>
+<li>Et le rôle des blocs transformers en fait, c’est de modifier le embedding de « apple » en utilisant les embeddings de tous les mots qui sont autour du mot « apple ».</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exemples-de-projets-sélecteur-de-codes-ibc-7" class="slide level2">
+<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<h3 id="mécanisme-dattention-permet-de-contextualiser-les-embeddings">Mécanisme d’attention: permet de contextualiser les embeddings</h3>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="images/attention.png" style="width:80.0%"></p>
+</div><div class="column" style="width:60%;">
+<p><br> <br> <img data-src="images/attention-luis.png" style="width:100.0%"></p>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Le mécanisme d’attention, ça a été développé en 2017 dans l’article « Attention is all you need », et c’est grâce à ça qu’on a aujourd’hui des grands modèles de langage comme BERT, GPT, Llama ou Gemini.</li>
+<li>En plus de bien capturer le contexte des mots, c’est une architecture qui est hautement parallélisable et qui permet donc d’entrainer rapidement les modèles si on a un GPU.</li>
+<li>Donc comme je vous disais, c’est le mécanisme d’attention dans le transformer qui permet de modifier les embeddings des mots en utilisant les embeddings des mots voisins, et ça fait ça en utilisant un mécanisme assez complexe.</li>
+<li>Donc supposons qu’on a un embedding non-contextualisé pour le mot « apple ». C’est un peu tannant, parce que « apple » peut désigner soit le fruit, soit la compagnie.</li>
+<li>Ce que l’attention fait, c’est qu’elle va faire bouger l’embedding de « apple » en utilisant les mots autour.</li>
+<li>Par exemple, dans la phrase « please buy me an apple and an orange », on a le mot « orange » qui va tirer le mot « apple » vers lui, ce qui va nous créer un embedding de « apple » spécialement fait pour cette phrase.</li>
+<li>De la même manière, dans la phrase « apple unveiled the new phone », l’embedding de « apple » va être tiré vers l’embedding du mot « phone », et donc dans cette phrase, « apple » a plus de chance d’être interprété comme étant la compagnie Apple.</li>
+<li>Il faut noter que « apple » (ainsi que tous les autres mots dans la fenêtre de contexte) va être influencé par tous les autres mots dans la fenêtre de contexte.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exemples-de-projets-sélecteur-de-codes-ibc-8" class="slide level2">
+<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Pré-entrainement</strong><br>
+<img data-src="images/pretraining.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+</div><div class="column" style="width:50%;">
+<p><strong>Fine-tuning</strong><br>
+<img data-src="images/finetuning.png" class="quarto-figure quarto-figure-center" style="width:78.0%"></p>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li><p>Donc je vous ai parlé de pré-entrainement et de fine-tuning. À quoi ça correspond exactement?</p></li>
+<li><p>Le pré-entrainement, ça se résume à faire apprendre la langue au modèle. Donc les patterns de la langue, la grammaire, la syntaxe, etc.</p></li>
+<li><p>Pour ce faire, on va entrainer le modèle sur des grandes quantités de texte. Donc par exemple, sur Wikipédia au grand complet.</p></li>
+<li><p>Et pour BERT, la méthode utilisée pour le pré-entrainer s’appelle <em>masked language modeling</em>. Ça consiste à cacher certain mots au modèle de manière aléatoire, et on demande au modèle de deviner le mot. On a ensuite une fonction de perte qui va punir le modèle pour ses erreurs, et avec la rétro-propagation et la descente de gradient, on peut aller mettre à jour les poids du modèle.</p></li>
+<li><p>On peut utiliser le modèle pré-entrainé directement, mais on va avoir de meilleures performances si on le fine-tune sur notre tâche à accomplir.</p></li>
+<li><p>Donc dans l’étape du fine-tuning, on prend le modèel pré-entrainé et on l’entraine de nouveau sur notre jeu de données.</p></li>
+<li><p>Par exemple, ici on a fine-tuné BERT sur une tâche de classification de courriels (pourriel ou courriel légitime).</p></li>
+<li><p>On a ajouté une tête de classification au modèle, qui permet de transformer la sortie de BERT en probabilité d’être un pourriel.</p></li>
+<li><p>On va ensuite aller faire l’entrainement en utilisant un jeu de données de courriels étiquetés « spam » ou « not-spam ».</p></li>
+<li><p>Donc en gros, dans cette étape de fine-tuning, les poids du modèle vont être modifiés de telle sorte que la tâche à accomplir est optimisée.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exemples-de-projets-sélecteur-de-codes-ibc-9" class="slide level2">
+<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<h4 id="sentence-bert-modifier-bert-pour-encoder-des-phrases-au-lieu-des-mots">Sentence-BERT: modifier BERT pour encoder des phrases au lieu des mots</h4>
+<div class="ul-font-size-medium">
+<ul>
+<li>Architecture <strong>siamoise</strong> à l’entrainement utilisant un modèle <strong>BERT pré-entrainé</strong> (les poids sont identiques dans les 2 blocs BERT).</li>
+<li>La couche de <strong>pooling</strong> permet d’obtenir un embedding de phrase à partir des embeddings de mots.</li>
+<li>Entrainé sur le corpus <a href="#/id-SNLI">SNLI</a>: 570 000 paires de phrases annotées <span style="color:#A50E0E;"><strong>contradiction</strong></span>, <span style="color:#0D652D;"><strong>implication</strong></span> ou <span style="color: #a8aabc;"><strong>neutre</strong></span>.</li>
+</ul>
+</div>
+<div class="columns">
+<div class="column" style="text-align: center;">
+<p><span style="text-decoration: underline;">À l’entrainement</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/sbert_1.png" class="quarto-figure quarto-figure-center" width="300"></p>
+</figure>
+</div>
+</div><div class="column" style="text-align: center;">
+<p><span style="text-decoration: underline;">À l’inférence</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/sbert_2.png" class="quarto-figure quarto-figure-center" width="130"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><span class="absolute" style="font-size: 17px;left: 50%; bottom: -30px; ">Figures tirées de <a href="https://www.oreilly.com/library/view/hands-on-large-language/9781098150952/">Hands-On Large Language Models – Jay Alammar et Maarten Grootendorst</a>»</span></p>
+<aside class="notes">
+<ul>
+<li><p>Donc ça nous amène à SBERT, qui est une modification de BERT pour faire des embeddings de phrases.</p></li>
+<li><p>C’est un réseau siamois (à l’entrainement) qui contient 2 modèles BERT avec les poids liés (en fait, c’est 2 copies du même modèle).</p></li>
+<li><p>On a une couche de pooling qui permet de transformer les embeddings de mots en embedding de phrase.</p></li>
+<li><p>Donc on prend BERT pré-entrainé et la couche de pooling qu’on arrange en un réseau siamois, et on va aller entrainer cette architecture sur un jeu de données de paires de phrases annotées contradiction, implication, ou neutre.</p></li>
+<li><p>Donc on prend chacune des 2 phrases, qu’on va passer au modèle BERT. Ensuite, la sortie de BERT va être donnée à la couche de pooling, qui va nous sortir un embedding de phrase. Ensuite, on va concaténer les 2 embeddings en plus de la différence absolue élément par élément, et c’est ce vecteur qui va être utilisé pour la classification entre « contradiction », « implication » ou « neutre ».</p></li>
+<li><p>Une fois le modèle entrainé, on peut se débarasser de l’architecture siamoise et garder seulement BERT + pooling.</p></li>
+<li><p>Donc en fait, ce qui améliore les embeddings de phrase, c’est vraiment l’étape d’entrainement sur les paires de phrases.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exemples-de-projets-sélecteur-de-codes-ibc-10" class="slide level2">
+<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<h3 id="télécharger-le-modèle-pré-entrainé">Télécharger le modèle pré-entrainé</h3>
+<p><img data-src="images/codeimage-snippet_21.svg" class="absolute" style="top: 100px; left: -60px; width: 800px; "></p>
+<p><img data-src="images/encode_snippet.svg" class="absolute" style="top: 100px; right: 0px; width: 600px; "></p>
+<div style="margin-top:310px; font-size: 25px;">
+<table>
+<colgroup>
+<col style="width: 42%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 7%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Phrase</th>
+<th>dim_1</th>
+<th>dim_2</th>
+<th>…</th>
+<th>dim_768</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>That is a happy person</td>
+<td>-0.0203</td>
+<td>-0.0104</td>
+<td>…</td>
+<td>-0.0053</td>
+</tr>
+<tr class="even">
+<td>That is a happy dog</td>
+<td>-0.0196</td>
+<td>-0.0323</td>
+<td>…</td>
+<td>-0.0274</td>
+</tr>
+<tr class="odd">
+<td>That is a very happy person</td>
+<td>-0.0136</td>
+<td>0.0043</td>
+<td>…</td>
+<td>-0.0054</td>
+</tr>
+<tr class="even">
+<td>Today is a sunny day</td>
+<td>-0.0075</td>
+<td>-0.0023</td>
+<td>…</td>
+<td>0.0078</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>On peut tester le modèle <a href="https://huggingface.co/sentence-transformers/all-mpnet-base-v2">ici</a>.</p>
+<aside class="notes">
+<ul>
+<li>On peut facilement télécharger le modèle à partir du site HuggingFace en utilisant la librairie « sentence_transformers ».</li>
+<li>Le modèle qu’on utilise n’est pas exactement le SBERT original, mais quelque chose de très similaire. C’est le modèle de base, donc celui avec 12 blocs transformers et 110 millions de paramètres.</li>
+<li>On peut commencer à l’utiliser directement pour obtenir des embeddings de phrases avec la méthode « encode ».</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exemples-de-projets-sélecteur-de-codes-ibc-11" class="slide level2">
+<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<h3 id="rappel-du-problème-à-résoudre">Rappel du problème à résoudre</h3>
+<p>Lorsqu’on assure une entreprise, on doit lui assigner un code parmi 1260 codes. Étant donnée une description d’entreprise, on doit assigner le bon code.</p>
+<div class="fragment fade-in">
+<!-- -->
+<h3 id="données">Données</h3>
+</div>
+<div class="fragment fade-in-then-out">
+<div style="font-size: 25px; position: absolute; top: 327px; left: 0px;">
+<p>IBC Codes</p>
+<table>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 28%">
+<col style="width: 57%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Index</th>
+<th>IBC Code</th>
+<th>IBC Code Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>0735a10</td>
+<td>Architects - Landscaping Only</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>8916a10</td>
+<td>Engineers</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>8075a10</td>
+<td>Sanitariums</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>5813a10</td>
+<td>Coffee shops (warming of food only, no roasting of beans)</td>
+</tr>
+<tr class="odd">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr class="even">
+<td>1260</td>
+<td>3496a10</td>
+<td>Electronic games</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="fragment fade-in">
+<div style="font-size: 25px; position: absolute; top: 327px; left: 0px;">
+<p>Entreprises</p>
+<table>
+<colgroup>
+<col style="width: 11%">
+<col style="width: 44%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Index</th>
+<th>Company Description</th>
+<th>IBC Code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Takeout meals-see policy, coding only</td>
+<td>5814a10 – Take out meals</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Construction of church building extension</td>
+<td>1830a20 – Building construction - general contr.</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Construction and renovation of gas stations including installation and removal of underground tanks and related pumps, carwash facilities. Snow clearing.</td>
+<td>1782a40 – Underground storage tank - remediation contractors</td>
+</tr>
+<tr class="even">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr class="odd">
+<td>136 000</td>
+<td>Licensed Restaurant</td>
+<td>5812a10 – Restaurants - licensed (Not liquor revenue)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li><p>La tâche qu’on veut accomplir est la suivante.</p></li>
+<li><p>Lorsqu’on assure une entreprise, le souscripteur doit lui assigner un code IBC parmi 1260 codes, ce qui n’est pas toujours évident.</p></li>
+<li><p>L’outil qu’on a créé permet de suggérer des codes IBC lorsqu’on fournit une description d’entreprise.</p></li>
+<li><p>Puisqu’on veut associer une entreprise à un code IBC, on va fine-tuner le modèle pour qu’il apprenne à rapprocher les entreprise de leur code IBC correspondant.</p></li>
+<li><p>Pour ça, on a 2 jeu de données. Le premier contient tous les codes et leur description, tandis que le deuxième contient 136 000 entreprises qu’on a assurées dans le passé avec leur code IBC associé.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exemples-de-projets-sélecteur-de-codes-ibc-12" class="slide level2">
+<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<h3 id="fine-tuner-le-modèle-pré-entrainé">Fine-tuner le modèle pré-entrainé</h3>
+<p>On génère d’abord 136 000 (autant qu’il y a d’entreprises) <span style="color: #007d57;"><strong>paires positives</strong></span> et 136 000 <span style="color: #650b22;"><strong>paires négatives</strong></span>.</p>
+<div class="ul-font-size-medium">
+<ul>
+<li><span style="color: #007d57;"><strong>paire positive</strong></span>: description de l’entreprise + description de son IBC code <span style="color: #007d57;"><strong>correspondant</strong></span></li>
+<li><span style="color: #650b22;"><strong>paire négative</strong></span>: description de l’entreprise + description d’un IBC code <span style="color: #650b22;"><strong>non-correspondant</strong></span></li>
+</ul>
+</div>
+<div style="font-size: 24px;">
+<table>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pair ID</th>
+<th>Company Description</th>
+<th>IBC Code Description</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Construction of church building extension</td>
+<td>Building construction - general contr.</td>
+<td><span style="color: #007d57;"><strong>Positive pair</strong></span></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Construction of church building extension</td>
+<td>Take out meals</td>
+<td><span style="color: #650b22;"><strong>Negative pair</strong></span></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Licensed restaurant</td>
+<td>Restaurants - licensed (Not liquor revenue)</td>
+<td><span style="color: #007d57;"><strong>Positive pair</strong></span></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Licensed restaurant</td>
+<td>Building construction - general contr.</td>
+<td><span style="color: #650b22;"><strong>Negative pair</strong></span></td>
+</tr>
+<tr class="odd">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>On va ensuite entrainer le modèle à rapprocher les <span style="color: #007d57;"><strong>paires positives</strong></span> et à éloigner les <span style="color: #650b22;"><strong>paires négatives</strong></span> en utilisant une fonction de perte et la descente de gradient.</p>
+<aside class="notes">
+<ul>
+<li>La première étape est de se créer un jeu de données étiqueté. On va se créer 136 00 paires de phrases positives et 136 000 paires négatives.</li>
+<li>Une paire positive, c’est une description d’entreprise couplée avec la description de son code IBC correspondant.</li>
+<li>Une paire négative, c’est une description d’entreprise couplée avec une description de code IBC non-correspondant.</li>
+<li>L’algorithme d’entrainement est alors déclenché pour modifier les paramètres du modèle de telle sorte que les entreprises sont rapprochées de leur IBC code correspondant (et éloignées de leurs codes IBC non-correspondants).</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exemples-de-projets-sélecteur-de-codes-ibc-13" class="slide level2">
+<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<h3 id="application-shiny"><a href="https://rstudiotest.cgic.ca/ibc_code_selector_app/">Application Shiny</a></h3>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="images/cap_app_1.png" class="absolute" style="top: 170px; left: 0px; width: 350px; "></p>
+</div><div class="column" style="width:70%;">
+<p><img data-src="images/cap_app_2.png" class="absolute" style="top: 170px; right: 0px; width: 900px; "></p>
+</div>
+</div>
 </section>
 <section id="exemples-de-projets-imagerie" class="slide level2">
 <h2>Exemples de projets — Imagerie</h2>
@@ -534,6 +1169,16 @@ Francis Duval, Chercheur Scientifique | Co-operators
 <p><img data-src="images/apres.png"></p>
 </div>
 </div>
+</section>
+<section id="exemples-de-projets-autres-projets" class="slide level2">
+<h2>Exemples de projets — Autres projets</h2>
+<p><br></p>
+<ul>
+<li>Développer un modèle de tarification télématique pour le nouveau produit d’assurance télématique.</li>
+<li>Développer une application Shiny se basant sur le simulateur d’innondations pour mieux gérer notre risque de concentration.</li>
+<li>Améliorer le processus des indiqués en utilisant la théorie des valeurs extrêmes pour estimer une période de retour pour les grosses réclamations.</li>
+<li>« Fuzzy matching » pour l’équipe d’analytique de fraudes.</li>
+</ul>
 </section>
 <section id="les-défis-de-lindustrie" class="slide level2">
 <h2>Les défis de l’industrie</h2>
