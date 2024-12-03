@@ -94,6 +94,8 @@ include-after-body: add-custom-footer.html
 :::
 
 
+# 1. Introduction à l'assurance de dommages, l'intelligence d'affaires, et Co-operators
+
 ## Assurance de dommage
 
 - Aussi appelée « assurance IARD » (Incendie, Accidents et Risques Divers) c'est un type d'assurance qui protège les **individus** et les **entreprises** contre les pertes financières liées à leurs **biens** et à leur **responsabilité** pour les dommages qu'ils peuvent causer à autrui.
@@ -174,14 +176,17 @@ include-after-body: add-custom-footer.html
 ::: notes
 - Les rôles peuvent être séparés en rôles traditionnels et non-traditionnels.
 - Les rôles traditionnels sont ceux qu'on associe plus naturellement au mot « actuariat ».
-- Les rôles traditionnels sont le plus souvent occupés par des actuaires (parfois des Fellows), tandis que les rôles non-traditionnels peuvent être occupés par des actuaires, mais surtout par des scientifiques de donnnées, des programmeurs, etc.
+- Les rôles traditionnels sont le plus souvent occupés par des actuaires (parfois des Fellows), tandis que les rôles non-traditionnels peuvent être occupés par des actuaires, mais aussi par des scientifiques de donnnées, des programmeurs, etc.
 - Dans les rôles traditionnels, on a la tarification, qui se sépare en 2 tâches. La première sont les indiqués (*rate indication*), où il faut essayer d'estimer le montant total des réclamations qu'on aura à payer l'an prochain. Ça sert à déterminer l'augmentation (ou, plus rarement, la diminution) des taux.
 - La deuxième tâche est la segmentation, qui consiste à évaluer le risque associé à chaque groupe d'assurés pour fixer des primes d'assurance qui réflète leur niveau de risque. Cette étape est importante pour contrer l'anti-sélection.
 - On a aussi l'évaluation des réserves. Ça consiste à estimer le montant à mettre de côté pour des réclamations qui sont arrivées mais qui n'ont pas été encore reportée à l'assureur, ou bien pour des réclamations qui sont reportées mais pas encore fermées.
 - Ensuite, on a la réassurance. Par exemple, on doit s'assurer qu'on est capable de payer les réclamations en cas de catastrophe (par exemple, une catastrophe naturelle comme une inondation). Sinon, on devra peut-être revoir nos contrats de réassurance.
 
-- Ensuite, il y a les rôles « non-traditionnels ». 
-
+- Ensuite, il y a les rôles « non-traditionnels ».
+- Ce sont des rôles où habituellement, la programmation est plus ominprésente. Chez Co-operators, on utilise beaucoup R et Python.
+- Ce sont des rôles qui sont moins « actuariels », mais qui peuvent quand même être occupés par des actuaires, étant donné qu'ils ont une bonne expertise en statistiques, en programmation. Mais en plus, ça aide toujours d'avoir des connaissances en assurance quand on est dans une compangie d'assurance.
+- Parmi ces rôles, on a l'intelligence d'affaires, l'analytique des réclamations et le underwriting analytics.
+- Je dirais que l'analytique des réclamations et underwriting analytics, ça ressemble beaucoup à l'intelligence d'affaires, sauf que c'est plus axé sur optimiser le processus des réclamations et de l'underwriting (l'underwriting, c'est quand on vend une police d'assurance).
 :::
 
 
@@ -260,11 +265,17 @@ Les données ne parlent pas d'elles-mêmes: il faut les faire parler.
 - Par contre, les données ne parlent pas d'elles-mêmes. Par exemple, on peut difficilement tirer des conclusions en observant à l'oeil une table de données. Il faut donc les faire « parler » en utilisant tous les moyens possibles: programmation, machine learning, deep learning, IA, théorie des valeurs extrêmes, et plusieurs autres modèles de toute sorte.
 - On produit alors des outils qui nous aident à tirer profit des données et de prendre les bonnes décisions, comme des modèles, des applications, des tableaux de bord, des visualisations, etc.
 - Par rapport au département d'actuariat, on s'éloigne de l'actuariat « classique », mais nos compétences en actuariat sont tout de même utiles puisque le bacc en actuariat contient beaucoup de science des données et qu'on reste quand même dans une compangie d'assurance.
-- Par rapport au département d'actuariat, je pense qu'on fait plus de programmation, entre autres.
 :::
 
 
-## Exemples de projets --- Sélecteur de codes IBC
+# 2. Exemples de projets
+
+::: notes
+- Maintenant, je vais vous donner des exemples de projets qu'on a faits dans le passé, avec un focus sur un projet que j'ai fait cette année et qui implique un modèle de langage, et donc qui permet de traiter du texte. 
+- Tous les projets que je vais vous présenter ont été faits dans l'équipe de recherche et innovation analytique.
+:::
+
+## Sélecteur de codes IBC
 
 #### Embeddings = Encoder une phrase (ou un mot) avec un vecteur de nombres réels
 
@@ -273,13 +284,20 @@ Les données ne parlent pas d'elles-mêmes: il faut les faire parler.
 Les mots/phrases similaires doivent être proches dans l'espace d'embedding.
 
 ::: notes
+- Donc je vous explique le problème qu'on avait à résoudre.
+- Lorsqu'on assure une entreprise, on doit lui assigner un code appelé « code IBC ».
+- Il y a 1260 de ces codes, donc ce n'est parfois pas évident de les assigner correctement.
+- Ce sont des codes qui représente des secteurs de l'industrie. Par exemple: restaurant, ostéopathe, firme d'ingénieurs, etc.
+- J'ai eu le mandat de développer un modèle qui permet de suggérer des codes étant donnée une description d'entreprise.
+- Pour ce faire, j'ai utilisé un modèle d'embedding, c'est-à-dire un modèle qui permet de transformer du texte en nombres.
+
 - Un embedding, c'est simplement une chaine de caractères encodée sous forme d'un vecteur.
 - Ça peut être n'importe quelle chaine de caractères: un mot, un token, une phrase, un document, etc.
 - Important parce qu'un ordinateur ne peut pas traiter du texte, seulement des nombres.
 :::
 
 
-## Exemples de projets --- Sélecteur de codes IBC
+## Sélecteur de codes IBC
 
 ### Espace d'embedding
 
@@ -295,7 +313,7 @@ Les mots/phrases similaires doivent être proches dans l'espace d'embedding.
 :::
 
 
-## Exemples de projets --- Sélecteur de codes IBC
+## Sélecteur de codes IBC
 
 ### « Interprétation » des dimensions
 
@@ -320,7 +338,7 @@ Les mots/phrases similaires doivent être proches dans l'espace d'embedding.
 :::
 
 
-## Exemples de projets --- Sélecteur de codes IBC
+## Sélecteur de codes IBC
 
 ### Résumé du problème
 
@@ -344,7 +362,7 @@ Les mots/phrases similaires doivent être proches dans l'espace d'embedding.
 :::
 
 
-## Exemples de projets --- Sélecteur de codes IBC
+## Sélecteur de codes IBC
 
 <br>
 
@@ -369,7 +387,7 @@ Les embeddings sont obtenus avec un modèle de langage appelé « Sentence-BERT 
 ![](images/sbert_2.png){.absolute width=170 top=160 right=30}
 
 
-## Exemples de projets --- Sélecteur de codes IBC
+## Sélecteur de codes IBC
 
 ### BERT: fournit des embeddings de mots contextualisés de haute qualité
 
@@ -437,7 +455,7 @@ Les embeddings sont obtenus avec un modèle de langage appelé « Sentence-BERT 
 :::
 
 
-## Exemples de projets --- Sélecteur de codes IBC
+## Sélecteur de codes IBC
 
 ### Architecture de BERT: une pile d'encodeurs « transformer »
 
@@ -459,7 +477,7 @@ Les embeddings sont obtenus avec un modèle de langage appelé « Sentence-BERT 
 :::
 
 
-## Exemples de projets --- Sélecteur de codes IBC
+## Sélecteur de codes IBC
 
 ### Mécanisme d'attention: permet de contextualiser les embeddings
 
@@ -489,7 +507,7 @@ Les embeddings sont obtenus avec un modèle de langage appelé « Sentence-BERT 
 :::
 
 
-## Exemples de projets --- Sélecteur de codes IBC
+## Sélecteur de codes IBC
 
 ::: columns
 
@@ -520,7 +538,7 @@ Les embeddings sont obtenus avec un modèle de langage appelé « Sentence-BERT 
 :::
 
 
-## Exemples de projets --- Sélecteur de codes IBC
+## Sélecteur de codes IBC
 
 #### Sentence-BERT: modifier BERT pour encoder des phrases au lieu des mots
 
@@ -560,7 +578,7 @@ Les embeddings sont obtenus avec un modèle de langage appelé « Sentence-BERT 
 :::
 
 
-## Exemples de projets --- Sélecteur de codes IBC
+## Sélecteur de codes IBC
 
 ### Télécharger le modèle pré-entrainé
 
@@ -586,7 +604,7 @@ On peut tester le modèle [ici](https://huggingface.co/sentence-transformers/all
 :::
 
 
-## Exemples de projets --- Sélecteur de codes IBC
+## Sélecteur de codes IBC
 
 ### Rappel du problème à résoudre
 
@@ -639,7 +657,7 @@ Entreprises
 
 :::
 
-## Exemples de projets --- Sélecteur de codes IBC
+## Sélecteur de codes IBC
 
 ### Fine-tuner le modèle pré-entrainé
 
@@ -672,7 +690,7 @@ On va ensuite entrainer le modèle à rapprocher les [**paires positives**]{styl
 :::
 
 
-## Exemples de projets --- Sélecteur de codes IBC
+## Sélecteur de codes IBC
 
 ### [Application Shiny](https://rstudiotest.cgic.ca/ibc_code_selector_app/)
 
@@ -689,7 +707,7 @@ On va ensuite entrainer le modèle à rapprocher les [**paires positives**]{styl
 :::
 
 
-## Exemples de projets --- Imagerie
+## Imagerie
 
 Estimer le coût de reconstruction des maisons.
 
@@ -697,7 +715,7 @@ Estimer le coût de reconstruction des maisons.
 
 [Précision de +/- 50k$]{style='margin-left:60px;'}
 
-## Exemples de projets --- Cartes d'inondations
+## Cartes d'inondations
 
 <br>
 
@@ -720,7 +738,7 @@ Après
 :::
 
 
-## Exemples de projets --- Autres projets
+## Autres projets
 
 <br>
 

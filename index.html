@@ -419,6 +419,11 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
           display:block!important;
       }</style></aside>
 </section>
+<section>
+<section id="introduction-à-lassurance-de-dommages-lintelligence-daffaires-et-co-operators" class="title-slide slide level1 center">
+<h1>1. Introduction à l’assurance de dommages, l’intelligence d’affaires, et Co-operators</h1>
+
+</section>
 <section id="assurance-de-dommage" class="slide level2">
 <h2>Assurance de dommage</h2>
 <ul>
@@ -511,12 +516,16 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
 <ul>
 <li><p>Les rôles peuvent être séparés en rôles traditionnels et non-traditionnels.</p></li>
 <li><p>Les rôles traditionnels sont ceux qu’on associe plus naturellement au mot « actuariat ».</p></li>
-<li><p>Les rôles traditionnels sont le plus souvent occupés par des actuaires (parfois des Fellows), tandis que les rôles non-traditionnels peuvent être occupés par des actuaires, mais surtout par des scientifiques de donnnées, des programmeurs, etc.</p></li>
+<li><p>Les rôles traditionnels sont le plus souvent occupés par des actuaires (parfois des Fellows), tandis que les rôles non-traditionnels peuvent être occupés par des actuaires, mais aussi par des scientifiques de donnnées, des programmeurs, etc.</p></li>
 <li><p>Dans les rôles traditionnels, on a la tarification, qui se sépare en 2 tâches. La première sont les indiqués (<em>rate indication</em>), où il faut essayer d’estimer le montant total des réclamations qu’on aura à payer l’an prochain. Ça sert à déterminer l’augmentation (ou, plus rarement, la diminution) des taux.</p></li>
 <li><p>La deuxième tâche est la segmentation, qui consiste à évaluer le risque associé à chaque groupe d’assurés pour fixer des primes d’assurance qui réflète leur niveau de risque. Cette étape est importante pour contrer l’anti-sélection.</p></li>
 <li><p>On a aussi l’évaluation des réserves. Ça consiste à estimer le montant à mettre de côté pour des réclamations qui sont arrivées mais qui n’ont pas été encore reportée à l’assureur, ou bien pour des réclamations qui sont reportées mais pas encore fermées.</p></li>
 <li><p>Ensuite, on a la réassurance. Par exemple, on doit s’assurer qu’on est capable de payer les réclamations en cas de catastrophe (par exemple, une catastrophe naturelle comme une inondation). Sinon, on devra peut-être revoir nos contrats de réassurance.</p></li>
 <li><p>Ensuite, il y a les rôles « non-traditionnels ».</p></li>
+<li><p>Ce sont des rôles où habituellement, la programmation est plus ominprésente. Chez Co-operators, on utilise beaucoup R et Python.</p></li>
+<li><p>Ce sont des rôles qui sont moins « actuariels », mais qui peuvent quand même être occupés par des actuaires, étant donné qu’ils ont une bonne expertise en statistiques, en programmation. Mais en plus, ça aide toujours d’avoir des connaissances en assurance quand on est dans une compangie d’assurance.</p></li>
+<li><p>Parmi ces rôles, on a l’intelligence d’affaires, l’analytique des réclamations et le underwriting analytics.</p></li>
+<li><p>Je dirais que l’analytique des réclamations et underwriting analytics, ça ressemble beaucoup à l’intelligence d’affaires, sauf que c’est plus axé sur optimiser le processus des réclamations et de l’underwriting (l’underwriting, c’est quand on vend une police d’assurance).</p></li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -607,7 +616,26 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
 <li>Par contre, les données ne parlent pas d’elles-mêmes. Par exemple, on peut difficilement tirer des conclusions en observant à l’oeil une table de données. Il faut donc les faire « parler » en utilisant tous les moyens possibles: programmation, machine learning, deep learning, IA, théorie des valeurs extrêmes, et plusieurs autres modèles de toute sorte.</li>
 <li>On produit alors des outils qui nous aident à tirer profit des données et de prendre les bonnes décisions, comme des modèles, des applications, des tableaux de bord, des visualisations, etc.</li>
 <li>Par rapport au département d’actuariat, on s’éloigne de l’actuariat « classique », mais nos compétences en actuariat sont tout de même utiles puisque le bacc en actuariat contient beaucoup de science des données et qu’on reste quand même dans une compangie d’assurance.</li>
-<li>Par rapport au département d’actuariat, je pense qu’on fait plus de programmation, entre autres.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="exemples-de-projets" class="title-slide slide level1 center">
+<h1>2. Exemples de projets</h1>
+<aside class="notes">
+<ul>
+<li>Maintenant, je vais vous donner des exemples de projets qu’on a faits dans le passé, avec un focus sur un projet que j’ai fait cette année et qui implique un modèle de langage, et donc qui permet de traiter du texte.</li>
+<li>Tous les projets que je vais vous présenter ont été faits dans l’équipe de recherche et innovation analytique.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -621,16 +649,22 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
           display:block!important;
       }</style></aside>
 </section>
-<section id="exemples-de-projets-sélecteur-de-codes-ibc" class="slide level2">
-<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<section id="sélecteur-de-codes-ibc" class="slide level2">
+<h2>Sélecteur de codes IBC</h2>
 <h4 id="embeddings-encoder-une-phrase-ou-un-mot-avec-un-vecteur-de-nombres-réels">Embeddings = Encoder une phrase (ou un mot) avec un vecteur de nombres réels</h4>
 
 <img data-src="images/embeddings.jpg" class="r-stretch"><p>Les mots/phrases similaires doivent être proches dans l’espace d’embedding.</p>
 <aside class="notes">
 <ul>
-<li>Un embedding, c’est simplement une chaine de caractères encodée sous forme d’un vecteur.</li>
-<li>Ça peut être n’importe quelle chaine de caractères: un mot, un token, une phrase, un document, etc.</li>
-<li>Important parce qu’un ordinateur ne peut pas traiter du texte, seulement des nombres.</li>
+<li><p>Donc je vous explique le problème qu’on avait à résoudre.</p></li>
+<li><p>Lorsqu’on assure une entreprise, on doit lui assigner un code appelé « code IBC ».</p></li>
+<li><p>Il y a 1260 de ces codes, donc ce n’est parfois pas évident de les assigner correctement.</p></li>
+<li><p>Ce sont des codes qui représente des secteurs de l’industrie. Par exemple: restaurant, ostéopathe, firme d’ingénieurs, etc.</p></li>
+<li><p>J’ai eu le mandat de développer un modèle qui permet de suggérer des codes étant donnée une description d’entreprise.</p></li>
+<li><p>Pour ce faire, j’ai utilisé un modèle d’embedding, c’est-à-dire un modèle qui permet de transformer du texte en nombres.</p></li>
+<li><p>Un embedding, c’est simplement une chaine de caractères encodée sous forme d’un vecteur.</p></li>
+<li><p>Ça peut être n’importe quelle chaine de caractères: un mot, un token, une phrase, un document, etc.</p></li>
+<li><p>Important parce qu’un ordinateur ne peut pas traiter du texte, seulement des nombres.</p></li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -644,8 +678,8 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
           display:block!important;
       }</style></aside>
 </section>
-<section id="exemples-de-projets-sélecteur-de-codes-ibc-1" class="slide level2">
-<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<section id="sélecteur-de-codes-ibc-1" class="slide level2">
+<h2>Sélecteur de codes IBC</h2>
 <h3 id="espace-dembedding">Espace d’embedding</h3>
 <ul>
 <li>Un bon modèle d’embedding va positionner les mots (ou phrases) de sens similaire « près » les uns des autres dans l’espace d’embedding.</li>
@@ -670,8 +704,8 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
           display:block!important;
       }</style></aside>
 </section>
-<section id="exemples-de-projets-sélecteur-de-codes-ibc-2" class="slide level2">
-<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<section id="sélecteur-de-codes-ibc-2" class="slide level2">
+<h2>Sélecteur de codes IBC</h2>
 <h3 id="interprétation-des-dimensions">« Interprétation » des dimensions</h3>
 <p><br> <br> <br> <br></p>
 <ul>
@@ -701,8 +735,8 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
           display:block!important;
       }</style></aside>
 </section>
-<section id="exemples-de-projets-sélecteur-de-codes-ibc-3" class="slide level2">
-<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<section id="sélecteur-de-codes-ibc-3" class="slide level2">
+<h2>Sélecteur de codes IBC</h2>
 <h3 id="résumé-du-problème">Résumé du problème</h3>
 <ul>
 <li>Lorsqu’on assure une entreprise, on doit lui assigner un « code IBC » parmi 1260 codes. Étant donnée une description d’entreprise, on doit lui assigner le bon code</li>
@@ -760,8 +794,8 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
 </div>
 </div>
 </section>
-<section id="exemples-de-projets-sélecteur-de-codes-ibc-4" class="slide level2">
-<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<section id="sélecteur-de-codes-ibc-4" class="slide level2">
+<h2>Sélecteur de codes IBC</h2>
 <p><br></p>
 <p>Par exemple, quel code doit-on assigner à l’entreprise: <br> <span style="color: #FFFFFF; background-color: #007d57; border-radius: 5px; padding: 2px 5px;">Small business manufacturing and selling equipment for hockey referees</span>?</p>
 <p><br></p>
@@ -777,8 +811,8 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
 <p>Les embeddings sont obtenus avec un modèle de langage appelé « Sentence-BERT ».</p>
 <p><img data-src="images/sbert_2.png" class="absolute" style="top: 160px; right: 30px; width: 170px; "></p>
 </section>
-<section id="exemples-de-projets-sélecteur-de-codes-ibc-5" class="slide level2">
-<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<section id="sélecteur-de-codes-ibc-5" class="slide level2">
+<h2>Sélecteur de codes IBC</h2>
 <h3 id="bert-fournit-des-embeddings-de-mots-contextualisés-de-haute-qualité">BERT: fournit des embeddings de mots contextualisés de haute qualité</h3>
 <p><img data-src="images/bert_puppet.png" class="absolute" style="top: 164px; right: 30px; width: 350px; "></p>
 <div width="100%">
@@ -852,8 +886,8 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
           display:block!important;
       }</style></aside>
 </section>
-<section id="exemples-de-projets-sélecteur-de-codes-ibc-6" class="slide level2">
-<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<section id="sélecteur-de-codes-ibc-6" class="slide level2">
+<h2>Sélecteur de codes IBC</h2>
 <h3 id="architecture-de-bert-une-pile-dencodeurs-transformer">Architecture de BERT: une pile d’encodeurs « transformer »</h3>
 <ul>
 <li>BERT est un réseau de neurones composé de 12 ou 24 modules de type «&nbsp;transformer&nbsp;».</li>
@@ -882,8 +916,8 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
           display:block!important;
       }</style></aside>
 </section>
-<section id="exemples-de-projets-sélecteur-de-codes-ibc-7" class="slide level2">
-<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<section id="sélecteur-de-codes-ibc-7" class="slide level2">
+<h2>Sélecteur de codes IBC</h2>
 <h3 id="mécanisme-dattention-permet-de-contextualiser-les-embeddings">Mécanisme d’attention: permet de contextualiser les embeddings</h3>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -915,8 +949,8 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
           display:block!important;
       }</style></aside>
 </section>
-<section id="exemples-de-projets-sélecteur-de-codes-ibc-8" class="slide level2">
-<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<section id="sélecteur-de-codes-ibc-8" class="slide level2">
+<h2>Sélecteur de codes IBC</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>Pré-entrainement</strong><br>
@@ -951,8 +985,8 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
           display:block!important;
       }</style></aside>
 </section>
-<section id="exemples-de-projets-sélecteur-de-codes-ibc-9" class="slide level2">
-<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<section id="sélecteur-de-codes-ibc-9" class="slide level2">
+<h2>Sélecteur de codes IBC</h2>
 <h4 id="sentence-bert-modifier-bert-pour-encoder-des-phrases-au-lieu-des-mots">Sentence-BERT: modifier BERT pour encoder des phrases au lieu des mots</h4>
 <div class="ul-font-size-medium">
 <ul>
@@ -1001,8 +1035,8 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
           display:block!important;
       }</style></aside>
 </section>
-<section id="exemples-de-projets-sélecteur-de-codes-ibc-10" class="slide level2">
-<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<section id="sélecteur-de-codes-ibc-10" class="slide level2">
+<h2>Sélecteur de codes IBC</h2>
 <h3 id="télécharger-le-modèle-pré-entrainé">Télécharger le modèle pré-entrainé</h3>
 <p><img data-src="images/codeimage-snippet_21.svg" class="absolute" style="top: 100px; left: -60px; width: 800px; "></p>
 <p><img data-src="images/encode_snippet.svg" class="absolute" style="top: 100px; right: 0px; width: 600px; "></p>
@@ -1075,8 +1109,8 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
           display:block!important;
       }</style></aside>
 </section>
-<section id="exemples-de-projets-sélecteur-de-codes-ibc-11" class="slide level2">
-<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<section id="sélecteur-de-codes-ibc-11" class="slide level2">
+<h2>Sélecteur de codes IBC</h2>
 <h3 id="rappel-du-problème-à-résoudre">Rappel du problème à résoudre</h3>
 <p>Lorsqu’on assure une entreprise, on doit lui assigner un code parmi 1260 codes. Étant donnée une description d’entreprise, on doit assigner le bon code.</p>
 <div class="fragment fade-in">
@@ -1200,8 +1234,8 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
           display:block!important;
       }</style></aside>
 </section>
-<section id="exemples-de-projets-sélecteur-de-codes-ibc-12" class="slide level2">
-<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<section id="sélecteur-de-codes-ibc-12" class="slide level2">
+<h2>Sélecteur de codes IBC</h2>
 <h3 id="fine-tuner-le-modèle-pré-entrainé">Fine-tuner le modèle pré-entrainé</h3>
 <p>On génère d’abord 136 000 (autant qu’il y a d’entreprises) <span style="color: #007d57;"><strong>paires positives</strong></span> et 136 000 <span style="color: #650b22;"><strong>paires négatives</strong></span>.</p>
 <div class="ul-font-size-medium">
@@ -1280,8 +1314,8 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
           display:block!important;
       }</style></aside>
 </section>
-<section id="exemples-de-projets-sélecteur-de-codes-ibc-13" class="slide level2">
-<h2>Exemples de projets — Sélecteur de codes IBC</h2>
+<section id="sélecteur-de-codes-ibc-13" class="slide level2">
+<h2>Sélecteur de codes IBC</h2>
 <h3 id="application-shiny"><a href="https://rstudiotest.cgic.ca/ibc_code_selector_app/">Application Shiny</a></h3>
 <div class="columns">
 <div class="column" style="width:30%;">
@@ -1291,14 +1325,14 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
 </div>
 </div>
 </section>
-<section id="exemples-de-projets-imagerie" class="slide level2">
-<h2>Exemples de projets — Imagerie</h2>
+<section id="imagerie" class="slide level2">
+<h2>Imagerie</h2>
 <p>Estimer le coût de reconstruction des maisons.</p>
 <p><video data-src="images/imagerie.mp4" width="950" controls=""><a href="images/imagerie.mp4">Video</a></video></p>
 <p><span style="margin-left:60px;">Précision de +/- 50k$</span></p>
 </section>
-<section id="exemples-de-projets-cartes-dinondations" class="slide level2">
-<h2>Exemples de projets — Cartes d’inondations</h2>
+<section id="cartes-dinondations" class="slide level2">
+<h2>Cartes d’inondations</h2>
 <p><br></p>
 <p>Améliorer les cartes d’inondation fournies par JBL, car celles-ci « pensaient » que les forêt sont des blocs qui ne laissent pas passer l’eau.</p>
 <div class="colums">
@@ -1312,8 +1346,8 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
 </div>
 </div>
 </section>
-<section id="exemples-de-projets-autres-projets" class="slide level2">
-<h2>Exemples de projets — Autres projets</h2>
+<section id="autres-projets" class="slide level2">
+<h2>Autres projets</h2>
 <p><br></p>
 <ul>
 <li>Développer un modèle de tarification télématique pour le nouveau produit d’assurance télématique.</li>
@@ -1346,7 +1380,7 @@ Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
 <p><a href="https://github.com/francisduval/presentation_uqam_3_decembre_2024">https://github.com/francisduval/presentation_uqam_3_decembre_2024</a></p>
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
