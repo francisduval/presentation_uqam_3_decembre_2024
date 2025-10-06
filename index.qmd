@@ -5,7 +5,7 @@ subtitle: "Présentation dans le cadre du cours « Applications probabilistes de
 author:
   name: Francis Duval, Chercheur Scientifique | Recherche et Innovation Analytique
   email: francis_duval@cooperators.ca
-date: 2024-12-03
+date: 2025-10-07
 date-format: long
 format: 
   revealjs:
@@ -75,22 +75,19 @@ include-after-body: add-custom-footer.html
 - Chercheur scientifique dans l'équipe « Recherche et Innovation Analytique » depuis septembre 2023.
 
 ::: notes
-- Baccalauréat en Actuariat, où j'ai eu 2 stages en assurance de dommages chez Co-operators.
+- Baccalauréat en Actuariat, où j'ai eu 2 stages en assurance de dommages chez Intact.
 - Session à l'étranger à l'Institut de Science Financière et d'Assurance (ISFA).
 
 - Ensuite, j'ai fait une maitrise en mathématiques actuarielles et financière, toujours à l'UQAM.
-- J'ai eu la chance durant ma maitrise de faire un stage de recherche Mitacs chez Desjardins. Mitacs est un organisme de recherche sans but lucratif qui offre des bourses de recherche.
+- J'ai eu la chance durant ma maitrise de faire un stage de recherche Mitacs chez Desjardins. Mitacs est un organisme de recherche sans but lucratif qui offre des bourses de recherche, notamment pour des stages en entreprise.
 - Durant ce stage chez Desjardins, j'ai développé un modèle d'évaluation des réserves en utilisant un algorithme de gradient boosting. C'est un modèle de réserve au niveau individuel, c'est-à-dire que contrairement à des modèles comme Chain-Ladder, on a essayer de prédire un montant pour chaque réclamation, de manière individuelle.
 - Ce qui était bien avec ce stage, c'est que le modèle que j'ai développé a servi pour mon mémoire de maitrise, et j'ai même publié un article avec Mathieu Pigeon. Donc c'est faire d'une pierre deux coups.
 
 - Suite à ma maitrise, j'ai eu une offre de Jean-Philippe et Mathieu Pigeon pour continuer mes études au sein de la Chaire CARA, qui venait tout juste d'être mise sur pieds. Comme j'avais aimé mon expérience de recherche à la maitrise, et que je trouvais que l'UQAM offrait une solide expertise en assurance de dommages avec des professeurs comme Jean-Philippe et Mathieu en plus du partenariat avec Co-operators, j'ai décidé de commencer un doctorat. De plus, le financement était excellent.
 - Dans le doctorat, il y a quelques cours au début, mais le but est surtout de faire de la recherche. J'ai fait ce qu'on appelle une thèse par article, qui consiste en 3 articles. Les articles sont ensuite mis ensemble pour constituer la thèse.
-- Ma thèse portait sur la modélisation des sinistres en assurance automobile avec l'utilisation de données télématiques.
-- Des données télématiques, ce sont des données collectées sur la conduite des assurés grâce à un dispositif installé dans le véhicule ou grâce à une application mobile.
-- Par exemple, mon troisième article était une application d'une architecture spéciale de réseau de neurones appelée « Combined Actuarial Neural Network (CANN) ». On a utilisé cette architecture pour inclure les données télématiques dans la tarification en plus des variables classique comme l'âge de l'assuré ou le modèle du véhicule. Plus spécifiquement, on a adapté l'architecture CANN à un modèle longitudinal qui utilise la distribution binomiale négative multivariée. On prend donc en compte la dépendance entre les années.
-- J'ai eu l'occasion également de voyager durant ma maitrise et mon doctorat (sauf durant la pandémie) pour assister (ou présenter) à des conférences. La Chaire CARA offre un assez bon budget pour les conférences à chaque année. Je suis allé entre autres à Vancouver, à Calgary et à Chicago. Ce qui est bien, c'est qu'il est possible de prendre des vacances suite à une conférence, ce qui permet d'économiser sur le transport.
+- Ma thèse portait sur la modélisation des sinistres en assurance automobile avec des méthodes de machine learning utilisant des données télématiques.
 
-- Et depuis un peu plus d'un an, je suis chercheur scientifique dans l'équipe de Recherche et Innovation Analytique chez Co-operators, où j'ai déjà eu l'occasion de travailler sur 5 projets.
+- Et depuis maintenant 2 ans, je suis chercheur scientifique dans l'équipe de Recherche et Innovation Analytique chez Co-operators, où j'ai déjà eu l'occasion de travailler sur plusieurs projets.
 :::
 
 
@@ -143,7 +140,7 @@ include-after-body: add-custom-footer.html
 
 ## Assurance de dommage
 
-### Que font les actuaires en assurance de dommage?
+### Qu'est-ce qu'on fait en assurance de dommage?
 
 ::: columns
 
@@ -167,7 +164,7 @@ include-after-body: add-custom-footer.html
 <div style='padding-left:0px;'>
 - Intelligence d'affaires
 - Analytique des réclamations
-- Underwriting analytics
+- Analytique de la souscription
 </div>
 :::
 
@@ -264,11 +261,10 @@ Les données ne parlent pas d'elles-mêmes: il faut les faire parler.
 - Les données peuvent être sous n'importe quelle forme: données tabulaires, données textuelles, données temporelles, données d'images, données géospatiales, données audio, etc.
 - Par contre, les données ne parlent pas d'elles-mêmes. Par exemple, on peut difficilement tirer des conclusions en observant à l'oeil une table de données. Il faut donc les faire « parler » en utilisant tous les moyens possibles: programmation, machine learning, deep learning, IA, théorie des valeurs extrêmes, et plusieurs autres modèles de toute sorte.
 - On produit alors des outils qui nous aident à tirer profit des données et de prendre les bonnes décisions, comme des modèles, des applications, des tableaux de bord, des visualisations, etc.
-- Par rapport au département d'actuariat, on s'éloigne de l'actuariat « classique », mais nos compétences en actuariat sont tout de même utiles puisque le bacc en actuariat contient beaucoup de science des données et qu'on reste quand même dans une compangie d'assurance.
 :::
 
 
-# 2. Exemples de projets
+# 2. Exemple de projet
 
 ::: notes
 - Maintenant, je vais vous donner des exemples de projets qu'on a faits dans le passé, avec un focus sur un projet que j'ai fait cette année et qui implique un modèle de langage, et donc qui permet de traiter du texte. 
@@ -455,56 +451,6 @@ Les embeddings sont obtenus avec un modèle de langage appelé « Sentence-BERT 
 :::
 
 
-## Sélecteur de codes IBC
-
-### Architecture de BERT: une pile d'encodeurs « transformer »
-
-- BERT est un réseau de neurones composé de 12 ou 24 modules de type «\ transformer\ ».
-- BERT « base »: 110 millions de paramètres.
-
-[Transformer (ENCODER)]{.absolute top=650 left=50}
-
-![](images/transformer-encoder.png){.absolute top=265 left=50 width=200}
-
-![](images/bert-base-bert-large-encoders.png){.absolute top=240 left=500 width=700}
-
-::: notes
-- L'architecture de BERT ressemble à ça. En gros, c'est un pile de blocs « transformer », plus précisément la partie « encodeuse » seulement.
-- La version de base contient 12 de ces blocs, tandis que la grande version en a 24.
-- Donc un bloc transformer, ça ressemble à ça. En gros, ça reçoit un input et ça va le passer à travers plusieurs fonctions mathématiques, dont l'attention multi-tête, qui est la clé pour comprendre le contexte de mots (je vais parler du mécanisme d'attention dans la prochaine slide).
-- Donc ce que le modèle fait en gros, c'est qu'il va partir d'un embedding fixe non-contextualisé (disons le embedding du mot « apple ») qu'il va passer à travers tous les blocs transformer pour obtenir un embedding de « apple » contextualisé.
-- Et le rôle des blocs transformers en fait, c'est de modifier le embedding de « apple » en utilisant les embeddings de tous les mots qui sont autour du mot « apple ». 
-:::
-
-
-## Sélecteur de codes IBC
-
-### Mécanisme d'attention: permet de contextualiser les embeddings
-
-::: columns
-
-::: {.column width='40%'}
-![](images/attention.png){width="80%"}
-:::
-
-::: {.column width='60%'}
-<br>
-<br>
-![](images/attention-luis.png){width="100%"}
-:::
-
-:::
-
-::: notes
-- Le mécanisme d'attention, ça a été développé en 2017 dans l'article « Attention is all you need », et c'est grâce à ça qu'on a aujourd'hui des grands modèles de langage comme BERT, GPT, Llama ou Gemini.
-- En plus de bien capturer le contexte des mots, c'est une architecture qui est hautement parallélisable et qui permet donc d'entrainer rapidement les modèles si on a un GPU.
-- Donc comme je vous disais, c'est le mécanisme d'attention dans le transformer qui permet de modifier les embeddings des mots en utilisant les embeddings des mots voisins, et ça fait ça en utilisant un mécanisme assez complexe.
-- Donc supposons qu'on a un embedding non-contextualisé pour le mot « apple ». C'est un peu tannant, parce que « apple » peut désigner soit le fruit, soit la compagnie.
-- Ce que l'attention fait, c'est qu'elle va faire bouger l'embedding de « apple » en utilisant les mots autour.
-- Par exemple, dans la phrase « please buy me an apple and an orange », on a le mot « orange » qui va tirer le mot « apple » vers lui, ce qui va nous créer un embedding de « apple » spécialement fait pour cette phrase.
-- De la même manière, dans la phrase « apple unveiled the new phone », l'embedding de « apple » va être tiré vers l'embedding du mot « phone », et donc dans cette phrase, « apple » a plus de chance d'être interprété comme étant la compagnie Apple.
-- Il faut noter que « apple » (ainsi que tous les autres mots dans la fenêtre de contexte) va être influencé par tous les autres mots dans la fenêtre de contexte.
-:::
 
 
 ## Sélecteur de codes IBC
@@ -535,72 +481,6 @@ Les embeddings sont obtenus avec un modèle de langage appelé « Sentence-BERT 
 - On a ajouté une tête de classification au modèle, qui permet de transformer la sortie de BERT en probabilité d'être un pourriel.
 - On va ensuite aller faire l'entrainement en utilisant un jeu de données de courriels étiquetés « spam » ou « not-spam ».
 - Donc en gros, dans cette étape de fine-tuning, les poids du modèle vont être modifiés de telle sorte que la tâche à accomplir est optimisée.
-:::
-
-
-## Sélecteur de codes IBC
-
-#### Sentence-BERT: modifier BERT pour encoder des phrases au lieu des mots
-
-::: {.ul-font-size-medium}
-- Architecture **siamoise** à l'entrainement utilisant un modèle **BERT pré-entrainé** (les poids sont identiques dans les 2 blocs BERT).
-- La couche de **pooling** permet d'obtenir un  embedding de phrase à partir des embeddings de mots.
-- Entrainé sur le corpus [SNLI](#id-SNLI): 570 000 paires de phrases annotées [**contradiction**]{style='color:#A50E0E;'}, [**implication**]{style='color:#0D652D;'} ou [**neutre**]{style='color: #a8aabc;'}.
-:::
-
-::: columns
-
-::: {.column width='50%' style='text-align: center;'}
-[À l'entrainement]{style='text-decoration: underline;'}
-
-![](images/sbert_1.png){width=300 fig-align="center"}
-:::
-
-::: {.column width='50%' style='text-align: center;'}
-[À l'inférence]{style='text-decoration: underline;'}
-
-![](images/sbert_2.png){width=130 fig-align="center"}
-:::
-
-:::
-
-[Figures tirées de [Hands-On Large Language Models -- Jay Alammar et Maarten Grootendorst](https://www.oreilly.com/library/view/hands-on-large-language/9781098150952/)»]{.absolute bottom=-30 left='50%' style='font-size: 17px;'}
-
-::: notes
-- Donc ça nous amène à SBERT, qui est une modification de BERT pour faire des embeddings de phrases.
-- C'est un réseau siamois (à l'entrainement) qui contient 2 modèles BERT avec les poids liés (en fait, c'est 2 copies du même modèle).
-- On a une couche de pooling qui permet de transformer les embeddings de mots en embedding de phrase.
-- Donc on prend BERT pré-entrainé et la couche de pooling qu'on arrange en un réseau siamois, et on va aller entrainer cette architecture sur un jeu de données de paires de phrases annotées contradiction, implication, ou neutre.
-- Donc on prend chacune des 2 phrases, qu'on va passer au modèle BERT. Ensuite, la sortie de BERT va être donnée à la couche de pooling, qui va nous sortir un embedding de phrase. Ensuite, on va concaténer les 2 embeddings en plus de la différence absolue élément par élément, et c'est ce vecteur qui va être utilisé pour la classification entre « contradiction », « implication » ou « neutre ».
-
-- Une fois le modèle entrainé, on peut se débarasser de l'architecture siamoise et garder seulement BERT + pooling.
-- Donc en fait, ce qui améliore les embeddings de phrase, c'est vraiment l'étape d'entrainement sur les paires de phrases.
-:::
-
-
-## Sélecteur de codes IBC
-
-### Télécharger le modèle pré-entrainé
-
-![](images/codeimage-snippet_21.svg){.absolute width=800 top=100 left=-60}
-
-![](images/encode_snippet.svg){.absolute width=600 top=100 right=0}
-
-::: {style='margin-top:310px; font-size: 25px;'}
-| Phrase                      | dim_1     | dim_2     | ... | dim_768     |
-|-----------------------------|-----------|-----------|-----|-------------|
-| That is a happy person      | -0.0203 | -0.0104 | ... | -0.0053 |
-| That is a happy dog         | -0.0196 | -0.0323 | ... | -0.0274 |
-| That is a very happy person | -0.0136 | 0.0043  | ... | -0.0054 |
-| Today is a sunny day        | -0.0075 | -0.0023 | ... | 0.0078  |
-:::
-
-On peut tester le modèle [ici](https://huggingface.co/sentence-transformers/all-mpnet-base-v2).
-
-::: notes
-- On peut facilement télécharger le modèle à partir du site HuggingFace en utilisant la librairie « sentence_transformers ».
-- Le modèle qu'on utilise n'est pas exactement le SBERT original, mais quelque chose de très similaire. C'est le modèle de base, donc celui avec 12 blocs transformers et 110 millions de paramètres.
-- On peut commencer à l'utiliser directement pour obtenir des embeddings de phrases avec la méthode « encode ».
 :::
 
 
@@ -694,20 +574,129 @@ On va ensuite entrainer le modèle à rapprocher les [**paires positives**]{styl
 
 ### [Application Shiny](https://rstudiotest.cgic.ca/ibc_code_selector_app/)
 
+<!-- ![](images/app_cap.png){.absolute width=350 top=170 left=0} -->
+![](images/app_cap.png){width=420}
+
+
+## Sélecteur de codes IBC  {visibility="uncounted"}
+
+### Architecture de BERT: une pile d'encodeurs « transformer »
+
+- BERT est un réseau de neurones composé de 12 ou 24 modules de type «\ transformer\ ».
+- BERT « base »: 110 millions de paramètres.
+
+[Transformer (ENCODER)]{.absolute top=650 left=50}
+
+![](images/transformer-encoder.png){.absolute top=265 left=50 width=200}
+
+![](images/bert-base-bert-large-encoders.png){.absolute top=240 left=500 width=700}
+
+::: notes
+- L'architecture de BERT ressemble à ça. En gros, c'est un pile de blocs « transformer », plus précisément la partie « encodeuse » seulement.
+- La version de base contient 12 de ces blocs, tandis que la grande version en a 24.
+- Donc un bloc transformer, ça ressemble à ça. En gros, ça reçoit un input et ça va le passer à travers plusieurs fonctions mathématiques, dont l'attention multi-tête, qui est la clé pour comprendre le contexte de mots (je vais parler du mécanisme d'attention dans la prochaine slide).
+- Donc ce que le modèle fait en gros, c'est qu'il va partir d'un embedding fixe non-contextualisé (disons le embedding du mot « apple ») qu'il va passer à travers tous les blocs transformer pour obtenir un embedding de « apple » contextualisé.
+- Et le rôle des blocs transformers en fait, c'est de modifier le embedding de « apple » en utilisant les embeddings de tous les mots qui sont autour du mot « apple ». 
+:::
+
+
+## Sélecteur de codes IBC  {visibility="uncounted"}
+
+### Mécanisme d'attention: permet de contextualiser les embeddings
+
 ::: columns
 
-::: {.column width='30%'}
-![](images/cap_app_1.png){.absolute width=350 top=170 left=0}
+::: {.column width='40%'}
+![](images/attention.png){width="80%"}
 :::
 
-::: {.column width='70%'}
-![](images/cap_app_2.png){.absolute width=900 top=170 right=0}
+::: {.column width='60%'}
+<br>
+<br>
+![](images/attention-luis.png){width="100%"}
 :::
 
 :::
 
+::: notes
+- Le mécanisme d'attention, ça a été développé en 2017 dans l'article « Attention is all you need », et c'est grâce à ça qu'on a aujourd'hui des grands modèles de langage comme BERT, GPT, Llama ou Gemini.
+- En plus de bien capturer le contexte des mots, c'est une architecture qui est hautement parallélisable et qui permet donc d'entrainer rapidement les modèles si on a un GPU.
+- Donc comme je vous disais, c'est le mécanisme d'attention dans le transformer qui permet de modifier les embeddings des mots en utilisant les embeddings des mots voisins, et ça fait ça en utilisant un mécanisme assez complexe.
+- Donc supposons qu'on a un embedding non-contextualisé pour le mot « apple ». C'est un peu tannant, parce que « apple » peut désigner soit le fruit, soit la compagnie.
+- Ce que l'attention fait, c'est qu'elle va faire bouger l'embedding de « apple » en utilisant les mots autour.
+- Par exemple, dans la phrase « please buy me an apple and an orange », on a le mot « orange » qui va tirer le mot « apple » vers lui, ce qui va nous créer un embedding de « apple » spécialement fait pour cette phrase.
+- De la même manière, dans la phrase « apple unveiled the new phone », l'embedding de « apple » va être tiré vers l'embedding du mot « phone », et donc dans cette phrase, « apple » a plus de chance d'être interprété comme étant la compagnie Apple.
+- Il faut noter que « apple » (ainsi que tous les autres mots dans la fenêtre de contexte) va être influencé par tous les autres mots dans la fenêtre de contexte.
+:::
 
-## Imagerie
+
+## Sélecteur de codes IBC {visibility="uncounted"}
+
+#### Sentence-BERT: modifier BERT pour encoder des phrases au lieu des mots
+
+::: {.ul-font-size-medium}
+- Architecture **siamoise** à l'entrainement utilisant un modèle **BERT pré-entrainé** (les poids sont identiques dans les 2 blocs BERT).
+- La couche de **pooling** permet d'obtenir un  embedding de phrase à partir des embeddings de mots.
+- Entrainé sur le corpus [SNLI](#id-SNLI): 570 000 paires de phrases annotées [**contradiction**]{style='color:#A50E0E;'}, [**implication**]{style='color:#0D652D;'} ou [**neutre**]{style='color: #a8aabc;'}.
+:::
+
+::: columns
+
+::: {.column width='50%' style='text-align: center;'}
+[À l'entrainement]{style='text-decoration: underline;'}
+
+![](images/sbert_1.png){width=300 fig-align="center"}
+:::
+
+::: {.column width='50%' style='text-align: center;'}
+[À l'inférence]{style='text-decoration: underline;'}
+
+![](images/sbert_2.png){width=130 fig-align="center"}
+:::
+
+:::
+
+[Figures tirées de [Hands-On Large Language Models -- Jay Alammar et Maarten Grootendorst](https://www.oreilly.com/library/view/hands-on-large-language/9781098150952/)»]{.absolute bottom=-30 left='50%' style='font-size: 17px;'}
+
+::: notes
+- Donc ça nous amène à SBERT, qui est une modification de BERT pour faire des embeddings de phrases.
+- C'est un réseau siamois (à l'entrainement) qui contient 2 modèles BERT avec les poids liés (en fait, c'est 2 copies du même modèle).
+- On a une couche de pooling qui permet de transformer les embeddings de mots en embedding de phrase.
+- Donc on prend BERT pré-entrainé et la couche de pooling qu'on arrange en un réseau siamois, et on va aller entrainer cette architecture sur un jeu de données de paires de phrases annotées contradiction, implication, ou neutre.
+- Donc on prend chacune des 2 phrases, qu'on va passer au modèle BERT. Ensuite, la sortie de BERT va être donnée à la couche de pooling, qui va nous sortir un embedding de phrase. Ensuite, on va concaténer les 2 embeddings en plus de la différence absolue élément par élément, et c'est ce vecteur qui va être utilisé pour la classification entre « contradiction », « implication » ou « neutre ».
+
+- Une fois le modèle entrainé, on peut se débarasser de l'architecture siamoise et garder seulement BERT + pooling.
+- Donc en fait, ce qui améliore les embeddings de phrase, c'est vraiment l'étape d'entrainement sur les paires de phrases.
+:::
+
+
+## Sélecteur de codes IBC {visibility="uncounted"}
+
+### Télécharger le modèle pré-entrainé
+
+![](images/codeimage-snippet_21.svg){.absolute width=800 top=100 left=-60}
+
+![](images/encode_snippet.svg){.absolute width=600 top=100 right=0}
+
+::: {style='margin-top:310px; font-size: 25px;'}
+| Phrase                      | dim_1     | dim_2     | ... | dim_768     |
+|-----------------------------|-----------|-----------|-----|-------------|
+| That is a happy person      | -0.0203 | -0.0104 | ... | -0.0053 |
+| That is a happy dog         | -0.0196 | -0.0323 | ... | -0.0274 |
+| That is a very happy person | -0.0136 | 0.0043  | ... | -0.0054 |
+| Today is a sunny day        | -0.0075 | -0.0023 | ... | 0.0078  |
+:::
+
+On peut tester le modèle [ici](https://huggingface.co/sentence-transformers/all-mpnet-base-v2).
+
+::: notes
+- On peut facilement télécharger le modèle à partir du site HuggingFace en utilisant la librairie « sentence_transformers ».
+- Le modèle qu'on utilise n'est pas exactement le SBERT original, mais quelque chose de très similaire. C'est le modèle de base, donc celui avec 12 blocs transformers et 110 millions de paramètres.
+- On peut commencer à l'utiliser directement pour obtenir des embeddings de phrases avec la méthode « encode ».
+:::
+
+
+## Imagerie {visibility="uncounted"}
 
 Estimer le coût de reconstruction des maisons.
 
@@ -715,7 +704,7 @@ Estimer le coût de reconstruction des maisons.
 
 [Précision de +/- 50k$]{style='margin-left:60px;'}
 
-## Cartes d'inondations
+## Cartes d'inondations {visibility="uncounted"}
 
 <br>
 
@@ -738,7 +727,7 @@ Après
 :::
 
 
-## Autres projets
+## Autres projets {visibility="uncounted"}
 
 <br>
 
@@ -748,7 +737,7 @@ Après
 - « Fuzzy matching » pour l'équipe d'analytique de fraudes.
 
 
-## Les défis de l'industrie
+## Les défis de l'industrie {visibility="uncounted"}
 
 <br>
 **Dans aucun ordre particulier:**
@@ -761,11 +750,3 @@ Après
 - Etc.
 
 ![](images/icon_flood.png){.absolute width=400 bottom=0 right='10%'}
-
-
-## {.center}
-
-::: r-fit-text
-### Questions?
-:::
-
