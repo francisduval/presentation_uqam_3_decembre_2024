@@ -153,6 +153,8 @@ include-after-body: add-custom-footer.html
   - Indiqués
   - Segmentation
 - Évaluation des réserves
+  - IBNR (*Incurred But Not Reported*)
+  - RBNS (*Reported But Not Settled*)
 - Réassurance
 :::
 
@@ -189,19 +191,27 @@ include-after-body: add-custom-footer.html
 
 ## Co-operators
 
-### Une coopérative d'assurance de dommage
+- Coopérative d'assurance de dommage fondée en 1945 par un groupe de fermiers 🧑‍🌾
 
-- Fondée en 1945 par un groupe de fermiers.
-- Coopérative de deuxième niveau (donc détenue par des coopératives).
-- But: « Assurer la sécurité financière des Canadiennes et Canadiens et de nos collectivités. Parce que nous sommes une coopérative, nos décisions d’affaires sont guidées par nos valeurs d’inclusion et de développement durable et responsable. »
+**Notre mission**
 
-![](images/auto.svg){.absolute width=200 top=450 left=0}
-![](images/maison.svg){.absolute width=200 top=450 left=200}
-![](images/entreprise.svg){.absolute width=200 top=450 left=600}
-![](images/ferme.svg){.absolute width=200 top=450 left=800}
+- Assurer la sécurité financière des Canadiennes et Canadiens et de nos collectivités. Parce que nous sommes une coopérative, nos décisions d’affaires sont guidées par nos valeurs d’inclusion et de développement durable et responsable.
 
-[Lignes personnelles]{.absolute top=650 left=100}
-[Lignes commerciales]{.absolute top=650 left=700}
+
+**Exemples d'engagements concrets**
+
+- Investissements dans des fonds verts🌳💰
+- Programme de séchage lors de dégâts d'eau spécifiques💧
+- Assurance innondation🌊
+- Programme « Build Back Better »🏗️
+
+<!-- ![](images/auto.svg){.absolute width=200 top=450 left=0} -->
+<!-- ![](images/maison.svg){.absolute width=200 top=450 left=200} -->
+<!-- ![](images/entreprise.svg){.absolute width=200 top=450 left=600} -->
+<!-- ![](images/ferme.svg){.absolute width=200 top=450 left=800} -->
+
+<!-- [Lignes personnelles]{.absolute top=650 left=100} -->
+<!-- [Lignes commerciales]{.absolute top=650 left=700} -->
 
 
 ::: notes
@@ -209,7 +219,9 @@ include-after-body: add-custom-footer.html
   - Investissement dans des fonds verts.
   - Programme de « Séchage » lors de dégâts d'eau spécifiques.
   - Assurance que les autres assureurs n'offrent pas: inondations.
+  - Programme « Build Back Better »: dans certains cas comme les tempêtes de grêles, on s'engage à rebâtir avec des matériaux résistants à une prochaine tempête. On assume le cout additionel de reconstruction.
 :::
+
 
 
 ## Qu'est-ce que l'intelligence d'affaires?
