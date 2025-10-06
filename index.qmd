@@ -84,7 +84,7 @@ include-after-body: add-custom-footer.html
 - Ce qui était bien avec ce stage, c'est que le modèle que j'ai développé a servi pour mon mémoire de maitrise, et j'ai même publié un article avec Mathieu Pigeon. Donc c'est faire d'une pierre deux coups.
 
 - Suite à ma maitrise, j'ai eu une offre de Jean-Philippe et Mathieu Pigeon pour continuer mes études au sein de la Chaire CARA, qui venait tout juste d'être mise sur pieds. Comme j'avais aimé mon expérience de recherche à la maitrise, et que je trouvais que l'UQAM offrait une solide expertise en assurance de dommages avec des professeurs comme Jean-Philippe et Mathieu en plus du partenariat avec Co-operators, j'ai décidé de commencer un doctorat. De plus, le financement était excellent.
-- Dans le doctorat, il y a quelques cours au début, mais le but est surtout de faire de la recherche. J'ai fait ce qu'on appelle une thèse par article, qui consiste en 3 articles. Les articles sont ensuite mis ensemble pour constituer la thèse.
+- J'ai fait ce qu'on appelle une thèse par article, qui consiste en 3 articles sur le même thème. Les articles sont ensuite mis ensemble pour constituer la thèse.
 - Ma thèse portait sur la modélisation des sinistres en assurance automobile avec des méthodes de machine learning utilisant des données télématiques.
 
 - Et depuis maintenant 2 ans, je suis chercheur scientifique dans l'équipe de Recherche et Innovation Analytique chez Co-operators, où j'ai déjà eu l'occasion de travailler sur plusieurs projets.
@@ -145,7 +145,7 @@ include-after-body: add-custom-footer.html
 ::: columns
 
 ::: {.column width='48%'}
-[Rôles traditionnels]{.two-green-blocks}  
+[Rôles « traditionnels »]{.two-green-blocks}  
 
 <div style='height:70px;'></div>
 
@@ -159,7 +159,7 @@ include-after-body: add-custom-footer.html
 :::
 
 ::: {.column width='48%'}
-[Rôles non-traditionnels]{.two-green-blocks}
+[Rôles « non-traditionnels »]{.two-green-blocks}
 
 <div style='height:70px;'></div>
 
@@ -175,17 +175,17 @@ include-after-body: add-custom-footer.html
 ::: notes
 - Les rôles peuvent être séparés en rôles traditionnels et non-traditionnels.
 - Les rôles traditionnels sont ceux qu'on associe plus naturellement au mot « actuariat ».
-- Les rôles traditionnels sont le plus souvent occupés par des actuaires (parfois des Fellows), tandis que les rôles non-traditionnels peuvent être occupés par des actuaires, mais aussi par des scientifiques de donnnées, des programmeurs, etc.
-- Dans les rôles traditionnels, on a la tarification, qui se sépare en 2 tâches. La première sont les indiqués (*rate indication*), où il faut essayer d'estimer le montant total des réclamations qu'on aura à payer l'an prochain. Ça sert à déterminer l'augmentation (ou, plus rarement, la diminution) des taux.
+- Les rôles traditionnels sont le plus souvent occupés par des actuaires, tandis que les rôles non-traditionnels peuvent être occupés par des actuaires, mais aussi par des scientifiques de donnnées, des programmeurs, etc.
+- Dans les rôles traditionnels, on a la tarification, qui se sépare en 2 tâches. La première sont les indiqués (*rate indication*), où il faut estimer le montant total des réclamations qu'on aura à payer l'an prochain. Ça sert à déterminer le pourcentage d'augmentation globale des taux.
 - La deuxième tâche est la segmentation, qui consiste à évaluer le risque associé à chaque groupe d'assurés pour fixer des primes d'assurance qui réflète leur niveau de risque. Cette étape est importante pour contrer l'anti-sélection.
 - On a aussi l'évaluation des réserves. Ça consiste à estimer le montant à mettre de côté pour des réclamations qui sont arrivées mais qui n'ont pas été encore reportée à l'assureur, ou bien pour des réclamations qui sont reportées mais pas encore fermées.
 - Ensuite, on a la réassurance. Par exemple, on doit s'assurer qu'on est capable de payer les réclamations en cas de catastrophe (par exemple, une catastrophe naturelle comme une inondation). Sinon, on devra peut-être revoir nos contrats de réassurance.
 
 - Ensuite, il y a les rôles « non-traditionnels ».
-- Ce sont des rôles où habituellement, la programmation est plus ominprésente. Chez Co-operators, on utilise beaucoup R et Python.
-- Ce sont des rôles qui sont moins « actuariels », mais qui peuvent quand même être occupés par des actuaires, étant donné qu'ils ont une bonne expertise en statistiques, en programmation. Mais en plus, ça aide toujours d'avoir des connaissances en assurance quand on est dans une compangie d'assurance.
-- Parmi ces rôles, on a l'intelligence d'affaires, l'analytique des réclamations et le underwriting analytics.
-- Je dirais que l'analytique des réclamations et underwriting analytics, ça ressemble beaucoup à l'intelligence d'affaires, sauf que c'est plus axé sur optimiser le processus des réclamations et de l'underwriting (l'underwriting, c'est quand on vend une police d'assurance).
+- Ce sont des rôles où typiquement, la programmation est plus ominprésente. Chez Co-operators, on utilise beaucoup R et Python.
+- Ce sont des rôles qui sont moins « actuariels », mais qui peuvent quand même être occupés par des actuaires, étant donné qu'ils ont une bonne expertise en statistiques, en programmation.
+- Parmi ces rôles, on a l'intelligence d'affaires, l'analytique des réclamations et l'analytique de la souscription.
+- Je dirais que l'analytique des réclamations et l'analytique de la souscription, ça ressemble beaucoup à l'intelligence d'affaires, sauf que c'est plus axé sur optimiser le processus des réclamations et de la souscription.
 :::
 
 
@@ -201,9 +201,9 @@ include-after-body: add-custom-footer.html
 **Exemples d'engagements concrets**
 
 - Investissements dans des fonds verts🌳💰
-- Programme de séchage lors de dégâts d'eau spécifiques💧
 - Assurance innondation🌊
 - Programme « Build Back Better »🏗️
+- Programme de séchage lors de dégâts d'eau spécifiques💧
 
 <!-- ![](images/auto.svg){.absolute width=200 top=450 left=0} -->
 <!-- ![](images/maison.svg){.absolute width=200 top=450 left=200} -->
@@ -215,6 +215,8 @@ include-after-body: add-custom-footer.html
 
 
 ::: notes
+- Co-operators, c'est une coopérative d'assurance de dommage fondée en 1945 par un groupe de fermiers qui ne trouvaient pas de produit d'assurance convenable pour leurs fermes.
+
 - Exemple de développement durable et responsable:
   - Investissement dans des fonds verts.
   - Programme de « Séchage » lors de dégâts d'eau spécifiques.
@@ -269,7 +271,7 @@ Les données ne parlent pas d'elles-mêmes: il faut les faire parler.
 
 ::: notes
 - 2 grands départements chez Co-operators: Actuariat et Intelligence d'Affaires. Qu'est-ce que l'intelligence d'affaires exactement?
-- En fait, le but de l'intelligence d'affaire est de tirer le plus de valeur possible des données.
+- La mission du département d'intelligence d'affaire est de tirer le plus de valeur possible des données.
 - Les données peuvent être sous n'importe quelle forme: données tabulaires, données textuelles, données temporelles, données d'images, données géospatiales, données audio, etc.
 - Par contre, les données ne parlent pas d'elles-mêmes. Par exemple, on peut difficilement tirer des conclusions en observant à l'oeil une table de données. Il faut donc les faire « parler » en utilisant tous les moyens possibles: programmation, machine learning, deep learning, IA, théorie des valeurs extrêmes, et plusieurs autres modèles de toute sorte.
 - On produit alors des outils qui nous aident à tirer profit des données et de prendre les bonnes décisions, comme des modèles, des applications, des tableaux de bord, des visualisations, etc.
@@ -279,9 +281,70 @@ Les données ne parlent pas d'elles-mêmes: il faut les faire parler.
 # 2. Exemple de projet
 
 ::: notes
-- Maintenant, je vais vous donner des exemples de projets qu'on a faits dans le passé, avec un focus sur un projet que j'ai fait cette année et qui implique un modèle de langage, et donc qui permet de traiter du texte. 
-- Tous les projets que je vais vous présenter ont été faits dans l'équipe de recherche et innovation analytique.
+- Maintenant, je vais vous parler d'un projet que j'ai fait dans l'équipe de recherche. C'est en fait le premier projet qui m'a été assigné quand j'ai commencé à tavailler.
 :::
+
+
+## Sélecteur de codes IBC
+
+#### Problème à résoudre en assurance commerciale
+
+::: {.ul-font-size-small}
+- Lorsqu'on souscrit une police d'assurance commerciale, on doit lui assigner un code parmi 1260 codes. Étant donnée une description d'entreprise, on doit assigner le bon code.
+- Par exemple, quel code doit-on assigner à l'entreprise décrite par [Small place where they serve coffee and food such as pastries]{style='color: #FFFFFF; background-color: #007d57; border-radius: 5px; padding: 2px 5px;'}?
+:::
+
+::: {.fragment .fade-in}
+#### Données
+:::
+
+::: {.fragment .fade-in-then-out}
+
+::: {style='font-size: 25px; position: absolute; top: 315px; left: 0px;'}
+IBC Codes
+
+| Index | IBC Code | IBC Code Description |
+|-|--|----|
+| 1 | 0735a10   | Architects - Landscaping Only |
+| 2 | 8916a10 | Engineers |
+| 3 | 8075a10 | Sanitariums |
+| 4 | 5813a10 | Coffee shops (warming of food only, no roasting of beans) |
+| ... | ... | ... |
+| 1260 | 3496a10 | Electronic games |
+:::
+
+:::
+
+::: {.fragment .fade-in}
+
+::: {style='font-size: 25px; position: absolute; top: 315px; left: 0px;'}
+Entreprises
+
+| Index | Company Description | IBC Code |
+|-|----|----|
+| 1 | Takeout meals-see policy, coding only | 5814a10  -- Take out meals |
+| 2 | Construction of church building extension | 1830a20  -- Building construction - general contr. |
+| 3 | Construction and renovation of gas stations including installation and removal of underground tanks and related pumps, carwash facilities.  Snow clearing. | 1782a40 -- Underground storage tank - remediation contractors |
+| ... | ... | ... |
+| 136 000 | Licensed Restaurant | 5812a10  -- Restaurants - licensed (Not liquor revenue) |
+:::
+
+:::
+
+
+::: notes
+- Je vous explique ici quel était le problème à résoudre.
+- On est dans le contexte de l'assurance commerciale, donc l'assurance d'entreprises.
+- Lorsqu'on assure une entreprise, le souscripteur doit lui assigner un code IBC parmi 1260 codes, ce qui n'est pas toujours évident parce qu'il y a beaucoup de codes, certains codes se ressemblent, et certains sont assez obscurs.
+- Le mandat était de créer un outil de suggestion de codes qui permet de faciliter la tâche du souscripteur.
+- Ce qu'on a fait en gros, c'est qu'on a pris un modèle de langage pré-entrainé qu'on a fine-tuné sur nos données. On a ensuite développé un modèle de classification à partir de ce modèle de language, et on a emballé le tout dans une application Shiny facile d'utilisation.
+
+- J'avais 2 jeux de données à ma disposition. Le premier contient tous les codes et leur description.
+- Ce sont des codes qui représente des secteurs de l'industrie.
+- Le deuxième contient 136 000 entreprises qu'on a assurées dans le passé avec leur code IBC associé.
+
+:::
+
 
 ## Sélecteur de codes IBC
 
@@ -292,16 +355,13 @@ Les données ne parlent pas d'elles-mêmes: il faut les faire parler.
 Les mots/phrases similaires doivent être proches dans l'espace d'embedding.
 
 ::: notes
-- Donc je vous explique le problème qu'on avait à résoudre.
-- Lorsqu'on assure une entreprise, on doit lui assigner un code appelé « code IBC ».
-- Il y a 1260 de ces codes, donc ce n'est parfois pas évident de les assigner correctement.
-- Ce sont des codes qui représente des secteurs de l'industrie. Par exemple: restaurant, ostéopathe, firme d'ingénieurs, etc.
-- J'ai eu le mandat de développer un modèle qui permet de suggérer des codes étant donnée une description d'entreprise.
-- Pour ce faire, j'ai utilisé un modèle d'embedding, c'est-à-dire un modèle qui permet de transformer du texte en nombres.
-
-- Un embedding, c'est simplement une chaine de caractères encodée sous forme d'un vecteur.
-- Ça peut être n'importe quelle chaine de caractères: un mot, un token, une phrase, un document, etc.
+- Le modèle de langage qu'on a utilisé (comme beaucoup d'autres modèles de langage) est un modèle d'embedding.
+- C'est quoi un embedding? C'est simplement une chaine de caractères encodée sous forme d'un vecteur.
+- Ça peut être n'importe quelle chaine de caractères: un mot, une phrase, un document, etc.
+- Donc un modèle d'embedding, c'est un modèle qui permet de transformer du texte en nombres.
 - Important parce qu'un ordinateur ne peut pas traiter du texte, seulement des nombres.
+- Un modèle d'embedding, c'est une fonction qui prend en entrée du texte et qui renvoie un vecteur en n dimensions.
+- Et comme vous le savez, un vecteur en n dimensions définit un point dans un espace en n dimensions qu'on appelle l'espace d'embedding.
 :::
 
 
@@ -315,9 +375,10 @@ Les mots/phrases similaires doivent être proches dans l'espace d'embedding.
 ![](images/embeddings_2.png)
 
 ::: notes
-- Un bon modèle d'embeddings, c'est un modèle qui va placer des mots de sens similaire proches dans l'espace d'embeddings. À l'inverse, les mots de sens non-similaire doivent être éloignés.
+- Un bon modèle d'embeddings, c'est un modèle qui va placer des mots (ou des chaines de caractères) de sens similaire proches dans l'espace d'embeddings. À l'inverse, les mots de sens non-similaire doivent être éloignés.
 - Ici par exemple, on a obtenu un embedding en 2D pour les mots « roi », « reine », « pomme » et « banane ».
 - On voit que les embeddings créés semblent avoir du sens puisque « roi » et « reine », qui ont des sens similaires, sont proches dans l'espace d'embedding. Les embeddings de « pomme » et « banane » sont également proches, tandis que les 2 fruits et les 2 personnes sont éloignés.
+- Ici embedding très simple en 2D mais habituellement, on a beaucoup plus de dimensions que ça.
 :::
 
 
@@ -339,60 +400,11 @@ Les mots/phrases similaires doivent être proches dans l'espace d'embedding.
 ::: notes
 - On peut avoir une pseudo-interprétation pour les dimensions des embeddings.
 - Donc ici, on a des embeddings en 7 dimensions de plusieurs mots, et on peut s'imaginer que chaque dimension correspond à un concept.
-- Donc peut-être que la dimension 1 correspond au degré de « vie », la dimension 2 correspond au degré de « félinité », la troisième au degré d'humanité, etc.
+- Donc on peut s'imaginer que la dimension 1 correspond au degré de « vie », la dimension 2 correspond au degré de « félinité », la troisième au degré d'humanité, etc.
 - Par exemple, le chat et le chaton ont un haut degré de félinité, tandis que la maison a un faible degré de félinité.
-- En pratique par contre, on ne peut pas vraiment associer chaque dimension à un concept qu'on peut interpréter, comme ici avec le degré de « vivant » et de « félinité ». 
+- En pratique par contre, on ne peut pas vraiment associer chaque dimension à un concept qu'on peut interpréter.
 - Par contre, ça reste que chaque dimension est associée à un concept dont le modèle peut utiliser.
 :::
-
-
-## Sélecteur de codes IBC
-
-### Résumé du problème
-
-- Lorsqu’on assure une entreprise, on doit lui assigner un « code IBC » parmi 1260 codes. Étant donnée une description d’entreprise, on doit lui assigner le bon code
-
-::: {.fragment .fade-in}
-
-### Exemples de codes IBC
-
-::: {style='font-size: 25px; position: absolute; top: 350px; left: 0px;'}
-| Index | Code IBC | Description du code |
-|-|--|----|
-| 1 | 0735a10   | Architects - Landscaping Only |
-| 2 | 8916a10 | Engineers |
-| 3 | 8075a10 | Sanitariums |
-| 4 | 5813a10 | Coffee shops (warming of food only, no roasting of beans) |
-| ... | ... | ... |
-| 1260 | 3496a10 | Electronic games |
-:::
-
-:::
-
-
-## Sélecteur de codes IBC
-
-<br>
-
-Par exemple, quel code doit-on assigner à l'entreprise:
-<br>
-[Small business manufacturing and selling equipment for hockey referees]{style='color: #FFFFFF; background-color: #007d57; border-radius: 5px; padding: 2px 5px;'}?
-
-<br>
-
-**Comment procède-t-on pour assigner le bon code IBC?**
-
-::: {.ol-font-size-medium}
-1. On obtient un vecteur « d'embedding » représentant la description d'entreprise.
-2. On obtient également un vecteur d'embedding pour chaque code IBC.
-3. On calcule la distance entre l'entreprise et chaque code IBC.
-4. Finalement, on choisit le code IBC qui est le plus proche de l'entreprise.
-:::
-
-Les embeddings sont obtenus avec un modèle de langage appelé « Sentence-BERT ».
-
-
-![](images/sbert_2.png){.absolute width=170 top=160 right=30}
 
 
 ## Sélecteur de codes IBC
@@ -449,20 +461,15 @@ Les embeddings sont obtenus avec un modèle de langage appelé « Sentence-BERT 
 :::
 
 ::: notes
-- Le modèle qui sert de base à notre modèle Sentence-BERT d'embedding de phrases s'appelle BERT.
-- C'est un modèle qui a été développé par Google et qui permet d'obtenir des embeddings de mots (ou plutôt de tokens).
-- C'est un modèle qu'on dit « encoder-only », parce que contrairement à des modèles génératifs comme GPT, on utilise seulement la partie « encodeuse » du transformer.
-- Donc le but n'est pas de générer du texte, mais seulement d'obtenir des embeddings de mots.
-
-- C'est un modèle puissant pour 2 raisons principales.
+- Le modèle qui sert de base à notre modèle d'embedding de phrases s'appelle BERT.
+- C'est un modèle d'embeddings qui a été développé par Google.
+- C'est un modèle assez puissant pour 2 raisons principales.
 - Premièrement, il a été pré-entrainé sur énormément de texte (sur plus de 3 milliards de mots), ce qui fait qu'il peut être utilisé directement sans être fine-tuné.
 - Deuxièmement, c'est un modèle basé sur l'architecture transformer, qui permet d'obtenir des embeddings contextualisés de haute qualité, tout en étant hautement paraléllisable.
 - C'est un modèle open-source, donc n'importe qui peut le télécharger et l'utiliser directement, ou bien le fine-tuner sur une tâche particulière.
 
 - J'ajouterais également que BERT est relativement léger avec ses 110 millions de paramètres pour la version de base, ce qui permet de rapidement obtenir des embeddings, même sur un laptop.
 :::
-
-
 
 
 ## Sélecteur de codes IBC
@@ -498,62 +505,9 @@ Les embeddings sont obtenus avec un modèle de langage appelé « Sentence-BERT 
 
 ## Sélecteur de codes IBC
 
-### Rappel du problème à résoudre
-
-Lorsqu'on assure une entreprise, on doit lui assigner un code parmi 1260 codes. Étant donnée une description d'entreprise, on doit assigner le bon code.
-
-::: {.fragment .fade-in}
-### Données
-:::
-
-::: {.fragment .fade-in-then-out}
-
-::: {style='font-size: 25px; position: absolute; top: 327px; left: 0px;'}
-IBC Codes
-
-| Index | IBC Code | IBC Code Description |
-|-|--|----|
-| 1 | 0735a10   | Architects - Landscaping Only |
-| 2 | 8916a10 | Engineers |
-| 3 | 8075a10 | Sanitariums |
-| 4 | 5813a10 | Coffee shops (warming of food only, no roasting of beans) |
-| ... | ... | ... |
-| 1260 | 3496a10 | Electronic games |
-:::
-
-:::
-
-::: {.fragment .fade-in}
-
-::: {style='font-size: 25px; position: absolute; top: 327px; left: 0px;'}
-Entreprises
-
-| Index | Company Description | IBC Code |
-|-|----|----|
-| 1 | Takeout meals-see policy, coding only | 5814a10  -- Take out meals |
-| 2 | Construction of church building extension | 1830a20  -- Building construction - general contr. |
-| 3 | Construction and renovation of gas stations including installation and removal of underground tanks and related pumps, carwash facilities.  Snow clearing. | 1782a40 -- Underground storage tank - remediation contractors |
-| ... | ... | ... |
-| 136 000 | Licensed Restaurant | 5812a10  -- Restaurants - licensed (Not liquor revenue) |
-:::
-
-:::
-
-::: notes
-- La tâche qu'on veut accomplir est la suivante.
-- Lorsqu'on assure une entreprise, le souscripteur doit lui assigner un code IBC parmi 1260 codes, ce qui n'est pas toujours évident.
-- L'outil qu'on a créé permet de suggérer des codes IBC lorsqu'on fournit une description d'entreprise.
-- Puisqu'on veut associer une entreprise à un code IBC, on va fine-tuner le modèle pour qu'il apprenne à rapprocher les entreprise de leur code IBC correspondant.
-
-- Pour ça, on a 2 jeu de données. Le premier contient tous les codes et leur description, tandis que le deuxième contient 136 000 entreprises qu'on a assurées dans le passé avec leur code IBC associé.
-
-:::
-
-## Sélecteur de codes IBC
-
 ### Fine-tuner le modèle pré-entrainé
 
-On génère d'abord 136 000 (autant qu'il y a d'entreprises) [**paires positives**]{style='color: #007d57;'} et 136 000 [**paires négatives**]{style='color: #650b22;'}.
+On génère d'abord des [**paires positives**]{style='color: #007d57;'} et des [**paires négatives**]{style='color: #650b22;'}.
 
 ::: {.ul-font-size-medium}
 - [**paire positive**]{style='color: #007d57;'}: description de l'entreprise + description de son IBC code [**correspondant**]{style='color: #007d57;'}
@@ -575,11 +529,36 @@ On va ensuite entrainer le modèle à rapprocher les [**paires positives**]{styl
 
 
 ::: notes
-- La première étape est de se créer un jeu de données étiqueté. On va se créer 136 00 paires de phrases positives et 136 000 paires négatives.
+- La première étape est de se créer un jeu de données étiqueté. On va se créer autant de paires positives que de paires négatives.
 - Une paire positive, c'est une description d'entreprise couplée avec la description de son code IBC correspondant.
 - Une paire négative, c'est une description d'entreprise couplée avec une description de code IBC non-correspondant.
 - L'algorithme d'entrainement est alors déclenché pour modifier les paramètres du modèle de telle sorte que les entreprises sont rapprochées de leur IBC code correspondant (et éloignées de leurs codes IBC non-correspondants).
 :::
+
+
+## Sélecteur de codes IBC
+
+### Fonctionnement du modèle
+
+Partons avec cette description d'entreprise cible:
+<br>
+[Small place where they serve coffee and food such as pastries]{style='color: #FFFFFF; background-color: #007d57; border-radius: 5px; padding: 2px 5px;'}
+
+<br>
+
+**Comment procède-t-on pour suggérer des codes IBC?**
+
+::: {.ol-font-size-medium}
+1. On obtient un **embedding** représentant la **description d'entreprise cible** en utilisant notre modèle fine-tuné.
+2. On a préalablement fait de même pour les **136 000 entreprises** de notre jeu de données.
+3. On calcule la **distance** entre l'**entreprise cible** et toutes les **entreprises de notre jeu de données**.
+4. On trouve les **k entreprises les plus proches** (algorithme des $k$ plus proches voisins).
+4. On suggère les **codes les plus fréquents** dans les $k$ entreprises voisines.
+:::
+
+
+
+![](images/sbert_2.png){.absolute width=170 top=160 right=30}
 
 
 ## Sélecteur de codes IBC
